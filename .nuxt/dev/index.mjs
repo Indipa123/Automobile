@@ -3116,6 +3116,7 @@ const _UWxhfu = lazyEventHandler(() => {
 
 const _lazy_xwZpc6 = () => Promise.resolve().then(function () { return _slug__get$1; });
 const _lazy_ZcKq7V = () => Promise.resolve().then(function () { return index_get$7; });
+const _lazy__AsGtW = () => Promise.resolve().then(function () { return _id__get$1; });
 const _lazy_Vz2WXJ = () => Promise.resolve().then(function () { return index_get$5; });
 const _lazy_IZMHCw = () => Promise.resolve().then(function () { return index_get$3; });
 const _lazy_qlhOKC = () => Promise.resolve().then(function () { return index_get$1; });
@@ -3125,6 +3126,7 @@ const handlers = [
   { route: '', handler: _ymzPln, lazy: false, middleware: true, method: undefined },
   { route: '/api/cars/:slug', handler: _lazy_xwZpc6, lazy: true, middleware: false, method: "get" },
   { route: '/api/cars', handler: _lazy_ZcKq7V, lazy: true, middleware: false, method: "get" },
+  { route: '/api/dealers/:id', handler: _lazy__AsGtW, lazy: true, middleware: false, method: "get" },
   { route: '/api/dealers', handler: _lazy_Vz2WXJ, lazy: true, middleware: false, method: "get" },
   { route: '/api/news', handler: _lazy_IZMHCw, lazy: true, middleware: false, method: "get" },
   { route: '/api/reviews', handler: _lazy_qlhOKC, lazy: true, middleware: false, method: "get" },
@@ -3463,6 +3465,132 @@ const index_get$6 = defineEventHandler((event) => {
 const index_get$7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: index_get$6
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const mockDealers$1 = [
+  {
+    id: "d1",
+    name: "Prima Auto Lanka",
+    logo: "",
+    province: "Western",
+    district: "Colombo",
+    address: "142 Galle Road, Colombo 04",
+    phone: "+94 11 234 5678",
+    whatsapp: "+94 77 234 5678",
+    rating: 4.8,
+    reviewCount: 124,
+    listingCount: 89,
+    specialization: ["New Cars", "Hybrid"],
+    verified: true,
+    lat: 6.887,
+    lng: 79.851,
+    description: "Authorized Toyota dealer with over 20 years of experience.",
+    established: 2003
+  },
+  {
+    id: "d2",
+    name: "Millennium Motors",
+    logo: "",
+    province: "Western",
+    district: "Gampaha",
+    address: "28 Negombo Road, Ja-Ela",
+    phone: "+94 11 345 6789",
+    whatsapp: "+94 77 345 6789",
+    rating: 4.6,
+    reviewCount: 87,
+    listingCount: 145,
+    specialization: ["Used Cars", "SUV"],
+    verified: true,
+    lat: 7.073,
+    lng: 79.893,
+    established: 2008
+  },
+  {
+    id: "d3",
+    name: "Luxury Auto Gallery",
+    logo: "",
+    province: "Western",
+    district: "Colombo",
+    address: "56 Duplication Road, Colombo 03",
+    phone: "+94 11 456 7890",
+    whatsapp: "+94 77 456 7890",
+    rating: 4.9,
+    reviewCount: 62,
+    listingCount: 34,
+    specialization: ["Luxury", "BMW", "Mercedes"],
+    verified: true,
+    lat: 6.895,
+    lng: 79.855,
+    established: 2015
+  },
+  {
+    id: "d4",
+    name: "Island Wide Auto",
+    logo: "",
+    province: "Central",
+    district: "Kandy",
+    address: "78 Peradeniya Road, Kandy",
+    phone: "+94 81 234 5678",
+    whatsapp: "+94 77 567 8901",
+    rating: 4.5,
+    reviewCount: 98,
+    listingCount: 112,
+    specialization: ["Used Cars", "New Cars"],
+    verified: true,
+    lat: 7.289,
+    lng: 80.632,
+    established: 2005
+  },
+  {
+    id: "d5",
+    name: "Southern Motors",
+    logo: "",
+    province: "Southern",
+    district: "Galle",
+    address: "34 Matara Road, Galle",
+    phone: "+94 91 234 5678",
+    whatsapp: "+94 77 678 9012",
+    rating: 4.3,
+    reviewCount: 45,
+    listingCount: 67,
+    specialization: ["Used Cars", "Pickup"],
+    verified: false,
+    lat: 6.055,
+    lng: 80.218,
+    established: 2011
+  },
+  {
+    id: "d6",
+    name: "EV Lanka Motors",
+    logo: "",
+    province: "Western",
+    district: "Colombo",
+    address: "22 Baseline Road, Colombo 09",
+    phone: "+94 11 567 8901",
+    whatsapp: "+94 77 789 0123",
+    rating: 4.7,
+    reviewCount: 38,
+    listingCount: 28,
+    specialization: ["Electric", "Hybrid", "EV"],
+    verified: true,
+    lat: 6.919,
+    lng: 79.863,
+    established: 2020
+  }
+];
+const _id__get = defineEventHandler((event) => {
+  const { id } = event.context.params || {};
+  const dealer = mockDealers$1.find((d) => d.id === id);
+  if (!dealer) {
+    setResponseStatus(event, 404);
+    return { error: "Dealer not found" };
+  }
+  return { dealer };
+});
+
+const _id__get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: _id__get
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const mockDealers = [
