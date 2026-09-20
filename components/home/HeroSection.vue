@@ -132,18 +132,18 @@ const stats = [
       />
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full py-16 md:py-24">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full py-10 sm:py-16 md:py-20 lg:py-24">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
         <!-- Left Side: Headline & 5-in-1 Universal Search (7 cols) -->
         <div class="lg:col-span-7">
           <!-- Animated Status Pill -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-white/90 backdrop-blur-md mb-6 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-primary animate-ping" />
-            <span>Sri Lanka's 360° All-in-One Automobile Ecosystem</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[11px] sm:text-xs font-semibold text-white/90 backdrop-blur-md mb-4 sm:mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-primary animate-ping shrink-0" />
+            <span class="truncate">Sri Lanka's 360° All-in-One Automobile Ecosystem</span>
           </div>
 
           <!-- Main Headline -->
-          <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08] mb-4">
+          <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1] mb-3 sm:mb-4">
             Everything
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-red-500 to-amber-400">
               Automobile
@@ -152,14 +152,14 @@ const stats = [
             In One Platform.
           </h1>
 
-          <p class="text-white/70 text-base sm:text-lg mb-8 max-w-xl leading-relaxed">
+          <p class="text-white/70 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-xl leading-relaxed">
             Buy & sell vehicles, visit verified dealer virtual stores, find spare parts filtered by your exact <strong class="text-white">Chassis Number</strong>, book certified garages, and request <strong class="text-amber-300">24/7 emergency roadside towing</strong>.
           </p>
 
           <!-- Universal 5-in-1 Search Card -->
           <div class="bg-gray-900/90 border border-white/15 rounded-3xl p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
-            <!-- Tabs Header -->
-            <div class="flex items-center gap-1 overflow-x-auto pb-3 mb-5 border-b border-white/10">
+            <!-- Tabs Header with smooth momentum touch scrolling -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-3 mb-4 sm:mb-5 border-b border-white/10 no-scrollbar">
               <button
                 v-for="t in [
                   { id: 'vehicles', label: '🚗 Buy Vehicles' },
@@ -170,7 +170,7 @@ const stats = [
                 ]"
                 :key="t.id"
                 :class="[
-                  'px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5',
+                  'px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 shrink-0 min-h-[40px]',
                   activeTab === t.id
                     ? 'bg-primary text-white shadow-glow-red'
                     : 'text-white/60 hover:text-white hover:bg-white/5'

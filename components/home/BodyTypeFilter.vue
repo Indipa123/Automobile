@@ -19,12 +19,12 @@ const bodyTypes = [
         <template #description>From sporty coupes to practical SUVs — find the perfect body style</template>
       </SectionTitle>
 
-      <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-3">
+      <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-2 sm:gap-3">
         <NuxtLink
           v-for="type in bodyTypes"
           :key="type.value"
           :to="`/cars?bodyType=${type.value}`"
-          class="group flex flex-col items-center gap-2 p-3 md:p-4 bg-white border border-border rounded-2xl hover:border-primary/50 hover:bg-gray-50 transition-all duration-300 text-center shadow-sm hover:shadow-md"
+          class="group flex flex-col items-center gap-1.5 sm:gap-2 p-2 sm:p-3 md:p-4 bg-white border border-border rounded-2xl hover:border-primary/50 hover:bg-gray-50 transition-all duration-300 text-center shadow-sm hover:shadow-md touch-manipulation"
         >
           <span class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300">{{ type.icon }}</span>
           <div>

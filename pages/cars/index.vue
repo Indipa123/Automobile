@@ -145,22 +145,22 @@ watch(() => filtersStore.filters.page, loadCars)
             </div>
 
             <!-- Pagination -->
-            <div v-if="carsStore.totalPages > 1" class="flex items-center justify-center gap-2 mt-8">
+            <div v-if="carsStore.totalPages > 1" class="flex flex-wrap items-center justify-center gap-2 mt-8">
               <button
                 :disabled="carsStore.currentPage === 1"
-                class="px-4 py-2 border border-border rounded-lg text-sm text-muted hover:text-gray-900 hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                class="px-3 sm:px-4 py-2 border border-border rounded-lg text-xs sm:text-sm text-muted hover:text-gray-900 hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors min-h-[40px] touch-manipulation"
                 @click="filtersStore.filters.page = (filtersStore.filters.page || 1) - 1"
               >
                 ← Prev
               </button>
-              <div class="flex items-center gap-1">
+              <div class="hidden sm:flex items-center gap-1">
                 <button
                   v-for="p in Math.min(carsStore.totalPages, 7)"
                   :key="p"
                   :class="[
-                    'w-9 h-9 rounded-lg text-sm font-medium transition-colors',
+                    'w-9 h-9 rounded-lg text-sm font-medium transition-colors touch-manipulation',
                     carsStore.currentPage === p
-                      ? 'bg-primary text-white'
+                      ? 'bg-primary text-white font-bold'
                       : 'text-muted hover:text-gray-900 hover:bg-gray-100 border border-border'
                   ]"
                   @click="filtersStore.filters.page = p"
@@ -168,9 +168,12 @@ watch(() => filtersStore.filters.page, loadCars)
                   {{ p }}
                 </button>
               </div>
+              <span class="sm:hidden text-xs text-muted font-medium px-2">
+                Page {{ carsStore.currentPage }} of {{ carsStore.totalPages }}
+              </span>
               <button
                 :disabled="carsStore.currentPage === carsStore.totalPages"
-                class="px-4 py-2 border border-border rounded-lg text-sm text-muted hover:text-gray-900 hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                class="px-3 sm:px-4 py-2 border border-border rounded-lg text-xs sm:text-sm text-muted hover:text-gray-900 hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors min-h-[40px] touch-manipulation"
                 @click="filtersStore.filters.page = (filtersStore.filters.page || 1) + 1"
               >
                 Next →

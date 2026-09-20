@@ -59,7 +59,7 @@ const isBest = (car: any, key: string) => {
       </div>
 
       <!-- Comparison table -->
-      <div v-else class="overflow-x-auto">
+      <div v-else class="overflow-x-auto no-scrollbar">
         <table class="w-full">
           <!-- Car headers -->
           <thead>
@@ -72,7 +72,7 @@ const isBest = (car: any, key: string) => {
               >
                 <div class="relative">
                   <button
-                    class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-surface border border-border text-muted hover:text-primary text-xs"
+                    class="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-white border border-border text-muted hover:text-primary text-xs flex items-center justify-center shadow-sm touch-manipulation"
                     @click="compareStore.removeCar(car.id)"
                   >
                     ✕

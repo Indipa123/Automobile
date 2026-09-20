@@ -81,7 +81,7 @@ const footerLinks = {
         <p class="text-muted text-sm">
           © {{ currentYear }} Automobile.lk. All rights reserved.
         </p>
-        <div class="flex items-center gap-6">
+        <div class="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6">
           <NuxtLink to="/privacy" class="text-muted hover:text-gray-900 text-sm transition-colors">Privacy Policy</NuxtLink>
           <NuxtLink to="/terms" class="text-muted hover:text-gray-900 text-sm transition-colors">Terms of Service</NuxtLink>
           <NuxtLink to="/sitemap" class="text-muted hover:text-gray-900 text-sm transition-colors">Sitemap</NuxtLink>

@@ -200,15 +200,15 @@ const submitDispatch = () => {
             <!-- Vehicle Type -->
             <div>
               <label class="block text-xs font-bold text-gray-700 mb-1">Vehicle Classification</label>
-              <div class="grid grid-cols-2 gap-2">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <button
                   v-for="vt in vehicleTypes"
                   :key="vt.id"
                   type="button"
                   :class="[
-                    'p-2.5 rounded-xl text-xs font-semibold text-left border transition-all',
+                    'p-2.5 rounded-xl text-xs font-semibold text-left border transition-all touch-manipulation min-h-[44px]',
                     selectedVehicle === vt.id
-                      ? 'bg-primary/10 border-primary text-primary'
+                      ? 'bg-primary/10 border-primary text-primary font-bold'
                       : 'bg-surface border-border text-gray-700 hover:bg-gray-100'
                   ]"
                   @click="selectedVehicle = vt.id"
@@ -300,7 +300,7 @@ const submitDispatch = () => {
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="provider in towingProviders"
           :key="provider.id"

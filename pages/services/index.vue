@@ -148,7 +148,7 @@ const submitBooking = () => {
       <!-- Category Tabs & Search Bar -->
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <!-- Type Tabs -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto">
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto no-scrollbar">
           <button
             v-for="tab in [
               { id: 'all', label: 'All Services' },
@@ -380,7 +380,7 @@ const submitBooking = () => {
               />
             </div>
 
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label class="block text-xs font-semibold text-gray-700 mb-1">Your Name</label>
                 <input

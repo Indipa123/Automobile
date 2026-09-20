@@ -216,7 +216,7 @@ const openWhatsAppEnquiry = (part: Part) => {
               :key="item.code"
               @click="setChassis(item.code)"
               :class="[
-                'px-2.5 py-1 rounded-md text-[11px] font-mono transition-all',
+                'px-2.5 py-1.5 rounded-md text-[11px] font-mono transition-all touch-manipulation min-h-[34px] flex items-center',
                 chassisQuery.toUpperCase() === item.code
                   ? 'bg-amber-400 text-gray-950 font-bold shadow-glow-accent'
                   : 'bg-white/10 hover:bg-white/20 text-white/90 border border-white/10'
@@ -295,7 +295,7 @@ const openWhatsAppEnquiry = (part: Part) => {
       </div>
 
       <!-- Category Filter Pills -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6">
+      <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 no-scrollbar">
         <button
           v-for="cat in [
             { id: 'all', label: 'All Products' },

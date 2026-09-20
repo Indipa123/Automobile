@@ -87,12 +87,12 @@ const stepTitles = [
     </div>
 
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8">
-      <div class="bg-surface border border-border rounded-2xl p-6 md:p-8">
+      <div class="bg-surface border border-border rounded-2xl p-4 sm:p-6 md:p-8">
 
         <!-- Step 1: Vehicle Info -->
         <div v-if="currentStep === 1" class="space-y-5">
           <h2 class="font-display font-bold text-gray-900 text-xl">Tell us about your vehicle</h2>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-muted block mb-1.5">Make *</label>
               <select v-model="form.make" class="w-full bg-background border border-border rounded-xl px-3 py-2.5 text-gray-900 focus:outline-none focus:border-primary">
@@ -139,7 +139,7 @@ const stepTitles = [
         <!-- Step 2: Specs -->
         <div v-if="currentStep === 2" class="space-y-5">
           <h2 class="font-display font-bold text-gray-900 text-xl">Vehicle specifications</h2>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-muted block mb-1.5">Engine CC</label>
               <input v-model="form.engineCC" type="number" placeholder="e.g. 1800" class="w-full bg-background border border-border rounded-xl px-3 py-2.5 text-gray-900 placeholder-muted focus:outline-none focus:border-primary" />
@@ -244,7 +244,7 @@ const stepTitles = [
         <!-- Step 5: Contact & Review -->
         <div v-if="currentStep === 5" class="space-y-5">
           <h2 class="font-display font-bold text-gray-900 text-xl">Your contact details</h2>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="col-span-2 sm:col-span-1">
               <label class="text-sm text-muted block mb-1.5">Your Name *</label>
               <input v-model="form.name" type="text" placeholder="Full name" class="w-full bg-background border border-border rounded-xl px-3 py-2.5 text-gray-900 placeholder-muted focus:outline-none focus:border-primary" />

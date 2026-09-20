@@ -42,17 +42,19 @@ onMounted(() => {
       <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/60 backdrop-blur-sm rounded-lg text-white text-xs">
         {{ activeIndex + 1 }} / {{ images.length }}
       </div>
-      <div class="absolute inset-0 flex items-center justify-between px-3">
+      <div class="absolute inset-0 flex items-center justify-between px-3 pointer-events-none">
         <button
           v-if="images.length > 1"
-          class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+          class="w-11 h-11 rounded-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/80 transition-colors pointer-events-auto touch-manipulation text-xl font-bold"
+          aria-label="Previous image"
           @click.stop="prev"
         >
           ‹
         </button>
         <button
           v-if="images.length > 1"
-          class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+          class="w-11 h-11 rounded-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/80 transition-colors pointer-events-auto touch-manipulation text-xl font-bold"
+          aria-label="Next image"
           @click.stop="next"
         >
           ›
@@ -61,11 +63,11 @@ onMounted(() => {
     </div>
 
     <!-- Thumbnails -->
-    <div v-if="images.length > 1" class="flex gap-2 overflow-x-auto pb-1">
+    <div v-if="images.length > 1" class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
       <button
         v-for="(img, i) in images"
         :key="i"
-        class="flex-shrink-0 w-20 h-14 rounded-xl overflow-hidden border-2 transition-all"
+        class="flex-shrink-0 w-20 h-14 rounded-xl overflow-hidden border-2 transition-all touch-manipulation"
         :class="i === activeIndex ? 'border-primary' : 'border-border hover:border-primary/50'"
         @click="activeIndex = i"
       >

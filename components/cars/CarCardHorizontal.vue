@@ -22,10 +22,10 @@ const conditionLabel: Record<string, string> = {
 <template>
   <NuxtLink
     :to="`/cars/${car.slug}`"
-    class="car-card group flex bg-white border border-border rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+    class="car-card group flex flex-col sm:flex-row bg-white border border-border rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md"
   >
     <!-- Image -->
-    <div class="relative w-48 sm:w-64 flex-shrink-0 bg-gray-100 overflow-hidden">
+    <div class="relative w-full sm:w-64 h-52 sm:h-auto flex-shrink-0 bg-gray-100 overflow-hidden">
       <img
         :src="car.images[0] || 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=256&h=160&fit=crop&auto=format'"
         :alt="`${car.year} ${car.make} ${car.model}`"
@@ -33,13 +33,13 @@ const conditionLabel: Record<string, string> = {
         loading="lazy"
         @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=256&h=160&fit=crop&auto=format'"
       />
-      <span :class="['absolute top-3 left-3 px-2 py-0.5 text-xs font-semibold', conditionBadge[car.condition]]">
+      <span :class="['absolute top-3 left-3 px-2 py-0.5 text-xs font-semibold rounded-full backdrop-blur-sm bg-white/90', conditionBadge[car.condition]]">
         {{ conditionLabel[car.condition] }}
       </span>
     </div>
 
     <!-- Content -->
-    <div class="flex-1 p-4 flex flex-col justify-between min-w-0">
+    <div class="flex-1 p-4 sm:p-5 flex flex-col justify-between min-w-0">
       <div>
         <div class="flex items-start justify-between gap-2">
           <div class="min-w-0">

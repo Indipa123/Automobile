@@ -63,7 +63,7 @@ const filteredDealers = computed(() => {
           </div>
 
           <!-- Quick Stats -->
-          <div class="flex items-center gap-4 border border-white/10 bg-white/5 rounded-2xl p-4 backdrop-blur-md shrink-0">
+          <div class="flex items-center justify-around sm:justify-start gap-2 sm:gap-4 border border-white/10 bg-white/5 rounded-2xl p-3 sm:p-4 backdrop-blur-md w-full md:w-auto shrink-0">
             <div class="text-center px-2">
               <div class="font-display font-bold text-2xl text-white">{{ dealers.length }}</div>
               <div class="text-[11px] text-gray-400 uppercase tracking-wider">Showrooms</div>

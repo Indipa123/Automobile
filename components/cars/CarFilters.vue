@@ -33,7 +33,7 @@ const provinceOptions = computed(() => provinces.map(p => ({ value: p, label: p 
 </script>
 
 <template>
-  <div class="bg-white border border-border rounded-2xl p-5 space-y-5 sticky top-20 shadow-sm">
+  <div class="bg-white border border-border rounded-2xl p-4 sm:p-5 space-y-4 sm:space-y-5 lg:sticky lg:top-20 shadow-sm">
     <div class="flex items-center justify-between">
       <h2 class="font-display font-bold text-gray-900 text-base">Filters</h2>
       <button class="text-xs text-primary hover:text-accent transition-colors" @click="clear">Clear all</button>

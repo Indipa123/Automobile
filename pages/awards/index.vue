@@ -25,7 +25,7 @@ const awards = [
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         <div
           v-for="award in awards"
           :key="award.category"

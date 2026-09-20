@@ -36,7 +36,7 @@ const annualSaving = computed(() => (petrolCost.value - evCost.value) * 12)
       <!-- Why Go Electric? -->
       <section>
         <SectionTitle eyebrow="Benefits" center>Why Go Electric?</SectionTitle>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
           <div v-for="item in whyEV" :key="item.title" class="bg-surface border border-border rounded-2xl p-5 text-center">
             <span class="text-3xl block mb-3">{{ item.icon }}</span>
             <h3 class="font-display font-bold text-gray-900 text-base mb-2">{{ item.title }}</h3>
@@ -46,7 +46,7 @@ const annualSaving = computed(() => (petrolCost.value - evCost.value) * 12)
       </section>
 
       <!-- Cost Comparison -->
-      <section class="bg-surface border border-border rounded-2xl p-8">
+      <section class="bg-surface border border-border rounded-2xl p-5 sm:p-8">
         <h2 class="font-display font-bold text-gray-900 text-2xl mb-6">EV vs Petrol Cost Calculator</h2>
         <div class="grid md:grid-cols-2 gap-8">
           <div>
@@ -81,7 +81,7 @@ const annualSaving = computed(() => (petrolCost.value - evCost.value) * 12)
       </section>
 
       <!-- Government incentives -->
-      <section class="bg-surface border border-emerald-500/20 rounded-2xl p-8">
+      <section class="bg-surface border border-emerald-500/20 rounded-2xl p-5 sm:p-8">
         <h2 class="font-display font-bold text-gray-900 text-2xl mb-4">🏛️ Government Incentives 2025</h2>
         <div class="space-y-4 text-sm">
           <div v-for="item in [

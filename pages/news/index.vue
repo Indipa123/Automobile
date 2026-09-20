@@ -27,7 +27,7 @@ const rest = computed(() => articles.value.filter((a: any) => !a.featured || art
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <h1 class="font-display font-bold text-gray-900 text-3xl mb-5">News & Guides</h1>
         <!-- Category tabs -->
-        <div class="flex gap-2 overflow-x-auto pb-1">
+        <div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
           <button
             v-for="cat in categories"
             :key="cat.value"

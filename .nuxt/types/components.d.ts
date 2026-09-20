@@ -36,6 +36,7 @@ interface _GlobalComponents {
   RecentReviews: typeof import("../../components/home/RecentReviews.vue")['default']
   AppFooter: typeof import("../../components/layout/AppFooter.vue")['default']
   AppHeader: typeof import("../../components/layout/AppHeader.vue")['default']
+  MobileBottomNav: typeof import("../../components/layout/MobileBottomNav.vue")['default']
   MobileMenu: typeof import("../../components/layout/MobileMenu.vue")['default']
   SearchBar: typeof import("../../components/layout/SearchBar.vue")['default']
   NewsCard: typeof import("../../components/news/NewsCard.vue")['default']
@@ -97,6 +98,7 @@ interface _GlobalComponents {
   LazyRecentReviews: LazyComponent<typeof import("../../components/home/RecentReviews.vue")['default']>
   LazyAppFooter: LazyComponent<typeof import("../../components/layout/AppFooter.vue")['default']>
   LazyAppHeader: LazyComponent<typeof import("../../components/layout/AppHeader.vue")['default']>
+  LazyMobileBottomNav: LazyComponent<typeof import("../../components/layout/MobileBottomNav.vue")['default']>
   LazyMobileMenu: LazyComponent<typeof import("../../components/layout/MobileMenu.vue")['default']>
   LazySearchBar: LazyComponent<typeof import("../../components/layout/SearchBar.vue")['default']>
   LazyNewsCard: LazyComponent<typeof import("../../components/news/NewsCard.vue")['default']>

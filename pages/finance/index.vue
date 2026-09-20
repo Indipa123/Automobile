@@ -48,7 +48,7 @@ const banks = [
           Bank Interest Rates Comparison
           <template #description>Current vehicle loan rates from major Sri Lankan banks (approximate)</template>
         </SectionTitle>
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto no-scrollbar">
           <table class="w-full">
             <thead>
               <tr class="border-b border-border">

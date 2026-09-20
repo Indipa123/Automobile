@@ -21,7 +21,7 @@ const navLinks = [
       class="fixed inset-0 z-40 lg:hidden"
     >
       <div class="absolute inset-0 bg-black/50 backdrop-blur-xs" @click="uiStore.closeMobileMenu" />
-      <div class="absolute right-0 top-0 bottom-0 w-80 bg-white border-l border-border flex flex-col shadow-2xl">
+      <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white border-l border-border flex flex-col shadow-2xl">
         <div class="flex items-center justify-between p-5 border-b border-border">
           <span class="font-display font-extrabold text-gray-900 text-lg">
             automobile<span class="text-primary">.lk</span>
@@ -44,7 +44,7 @@ const navLinks = [
           </a>
         </div>
 
-        <nav class="flex-1 overflow-y-auto p-4 space-y-1">
+        <nav class="flex-1 overflow-y-auto p-4 space-y-1 no-scrollbar">
           <NuxtLink
             v-for="link in navLinks"
             :key="link.label"
@@ -56,7 +56,7 @@ const navLinks = [
           </NuxtLink>
         </nav>
 
-        <div class="p-4 border-t border-border space-y-3">
+        <div class="p-4 border-t border-border space-y-3 pb-safe">
           <NuxtLink
             to="/sell/post-ad"
             class="flex items-center justify-center gap-2 w-full py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-colors text-sm shadow-glow-red"

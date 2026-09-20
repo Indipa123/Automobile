@@ -25,7 +25,7 @@ const banks = [
   <div class="space-y-6">
     <div class="grid md:grid-cols-2 gap-6">
       <!-- Inputs -->
-      <div class="bg-white border border-border rounded-2xl p-6 space-y-5">
+      <div class="bg-white border border-border rounded-2xl p-4 sm:p-6 space-y-5">
         <h3 class="font-display font-bold text-gray-900 text-xl">Loan Calculator</h3>
 
         <div>
@@ -126,9 +126,9 @@ const banks = [
     </div>
 
     <!-- Banks -->
-    <div class="bg-white border border-border rounded-2xl p-6">
+    <div class="bg-white border border-border rounded-2xl p-4 sm:p-6">
       <h4 class="font-display font-semibold text-gray-900 mb-4">Partner Banks & Estimated Rates</h4>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
         <div
           v-for="bank in banks"
           :key="bank.name"
@@ -161,7 +161,7 @@ const banks = [
         </svg>
       </button>
       <Transition name="slide-down">
-        <div v-if="showAmortization" class="overflow-x-auto border-t border-border">
+        <div v-if="showAmortization" class="overflow-x-auto no-scrollbar border-t border-border">
           <table class="w-full text-xs">
             <thead>
               <tr class="bg-gray-50">

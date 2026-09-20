@@ -19,7 +19,7 @@ const ratings = [
         <p class="text-muted">NCAP and international safety test results for cars available in Sri Lanka</p>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 overflow-x-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 overflow-x-auto no-scrollbar">
       <table class="w-full">
         <thead>
           <tr class="border-b border-border">

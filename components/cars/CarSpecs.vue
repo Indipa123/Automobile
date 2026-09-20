@@ -7,7 +7,7 @@ defineProps<{ car: Car }>()
 <template>
   <div class="space-y-6">
     <!-- Engine & Performance -->
-    <div class="bg-white border border-border rounded-2xl p-6">
+    <div class="bg-white border border-border rounded-2xl p-4 sm:p-6">
       <h3 class="font-display font-bold text-gray-900 text-lg mb-4">Engine & Performance</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div class="space-y-1">
@@ -46,7 +46,7 @@ defineProps<{ car: Car }>()
     </div>
 
     <!-- Vehicle Info -->
-    <div class="bg-white border border-border rounded-2xl p-6">
+    <div class="bg-white border border-border rounded-2xl p-4 sm:p-6">
       <h3 class="font-display font-bold text-gray-900 text-lg mb-4">Vehicle Details</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div class="space-y-1">
@@ -77,7 +77,7 @@ defineProps<{ car: Car }>()
     </div>
 
     <!-- Dimensions (if available) -->
-    <div v-if="car.length || car.width || car.height" class="bg-white border border-border rounded-2xl p-6">
+    <div v-if="car.length || car.width || car.height" class="bg-white border border-border rounded-2xl p-4 sm:p-6">
       <h3 class="font-display font-bold text-gray-900 text-lg mb-4">Dimensions & Weight</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div v-if="car.length" class="space-y-1">
@@ -104,9 +104,9 @@ defineProps<{ car: Car }>()
     </div>
 
     <!-- Features -->
-    <div v-if="car.features?.length" class="bg-white border border-border rounded-2xl p-6">
+    <div v-if="car.features?.length" class="bg-white border border-border rounded-2xl p-4 sm:p-6">
       <h3 class="font-display font-bold text-gray-900 text-lg mb-4">Features & Equipment</h3>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
         <div
           v-for="feature in car.features"
           :key="feature"

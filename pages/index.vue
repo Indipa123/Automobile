@@ -187,7 +187,7 @@ const ecosystemPillars = [
             <label class="block text-xs font-bold text-amber-300 uppercase font-mono mb-2">
               Instant Chassis Number / VIN Lookup:
             </label>
-            <div class="flex gap-2 mb-3">
+            <div class="flex flex-col sm:flex-row gap-2 mb-3">
               <input
                 v-model="homeChassisQuery"
                 type="text"
@@ -197,7 +197,7 @@ const ecosystemPillars = [
               />
               <button
                 @click="handleHomeChassisSearch"
-                class="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-gray-950 font-black rounded-xl text-xs transition-all shrink-0"
+                class="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-gray-950 font-black rounded-xl text-xs transition-all shrink-0 min-h-[44px] touch-manipulation flex items-center justify-center"
               >
                 Search Parts →
               </button>

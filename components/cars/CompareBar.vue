@@ -5,9 +5,9 @@ const { formatLKRShort } = useFormatCurrency()
 </script>
 
 <template>
-  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-border shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
-      <div class="flex-1 flex items-center gap-3 overflow-x-auto">
+  <div class="fixed bottom-14 lg:bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-border shadow-lg pb-1 sm:pb-0">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-3 sm:gap-4">
+      <div class="flex-1 flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar">
         <div
           v-for="car in compareStore.cars"
           :key="car.id"

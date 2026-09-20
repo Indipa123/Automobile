@@ -10,13 +10,14 @@ const showFloatingCTA = computed(() =>
 
 
 <template>
-  <div class="min-h-screen bg-background text-gray-900">
+  <div class="min-h-screen bg-background text-gray-900 overflow-x-hidden">
     <AppHeader />
-    <main class="pt-16">
+    <main class="pt-16 pb-16 lg:pb-0">
       <slot />
     </main>
     <AppFooter />
     <AppToast />
+    <MobileBottomNav />
 
     <!-- Compare Bar -->
     <CompareBar v-if="compareStore.count > 0" />

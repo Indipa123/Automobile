@@ -25,12 +25,12 @@ const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '-').
         <template #description>Explore Sri Lanka's most popular automobile brands</template>
       </SectionTitle>
 
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-3">
         <NuxtLink
           v-for="brand in brands"
           :key="brand.name"
           :to="`/research/brands/${slugify(brand.name)}`"
-          class="group flex flex-col items-center gap-3 p-4 bg-white border border-border rounded-2xl hover:border-primary/40 transition-all duration-300 text-center hover:shadow-md"
+          class="group flex flex-col items-center gap-2 sm:gap-3 p-2.5 sm:p-4 bg-white border border-border rounded-2xl hover:border-primary/40 transition-all duration-300 text-center hover:shadow-md touch-manipulation"
         >
           <!-- Brand logo placeholder with first letter -->
           <div

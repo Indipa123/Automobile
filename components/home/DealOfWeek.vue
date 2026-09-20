@@ -68,7 +68,7 @@ const pad = (n: number) => n.toString().padStart(2, '0')
             </div>
 
             <!-- Details -->
-            <div class="flex flex-col justify-center p-8 md:p-10">
+            <div class="flex flex-col justify-center p-5 sm:p-8 md:p-10">
               <p class="text-primary text-sm font-semibold mb-1">{{ deal.make }}</p>
               <h3 class="font-display font-extrabold text-gray-900 text-3xl md:text-4xl mb-2">{{ deal.model }}</h3>
               <p class="text-muted mb-5">{{ deal.year }} · {{ deal.mileage.toLocaleString() }} km · {{ deal.location }}</p>
@@ -100,7 +100,7 @@ const pad = (n: number) => n.toString().padStart(2, '0')
                 </div>
               </div>
 
-              <AppButton variant="primary" size="lg" class="mt-6 w-fit">
+              <AppButton variant="primary" size="lg" class="mt-6 w-full sm:w-fit min-h-[44px] touch-manipulation">
                 View This Deal →
               </AppButton>
             </div>

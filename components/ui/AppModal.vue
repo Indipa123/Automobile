@@ -37,19 +37,19 @@ onMounted(() => {
     <Transition name="modal">
       <div
         v-if="modelValue"
-        class="fixed inset-0 z-[100] flex items-center justify-center p-4"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4"
         @click.self="close"
       >
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" @click="close" />
         <div
           :class="[
-            'relative w-full bg-white border border-border rounded-2xl shadow-2xl z-10 max-h-[90vh] overflow-y-auto',
+            'relative w-full bg-white border border-border rounded-2xl shadow-2xl z-10 max-h-[92vh] sm:max-h-[85vh] overflow-y-auto',
             sizeClasses[size],
           ]"
         >
-          <div v-if="title || $slots.header" class="flex items-center justify-between p-6 border-b border-border">
+          <div v-if="title || $slots.header" class="flex items-center justify-between p-4 sm:p-6 border-b border-border">
             <slot name="header">
-              <h2 class="text-xl font-display font-bold text-gray-900">{{ title }}</h2>
+              <h2 class="text-lg sm:text-xl font-display font-bold text-gray-900">{{ title }}</h2>
             </slot>
             <button
               class="text-gray-500 hover:text-gray-900 transition-colors p-1"
@@ -60,10 +60,10 @@ onMounted(() => {
               </svg>
             </button>
           </div>
-          <div class="p-6">
+          <div class="p-4 sm:p-6">
             <slot />
           </div>
-          <div v-if="$slots.footer" class="px-6 py-4 border-t border-border">
+          <div v-if="$slots.footer" class="px-4 sm:px-6 py-3 sm:py-4 border-t border-border">
             <slot name="footer" />
           </div>
         </div>

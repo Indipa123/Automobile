@@ -74,7 +74,7 @@ const toggleCompare = (e: Event) => {
       </span>
       <!-- Heart -->
       <button
-        class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center transition-all hover:bg-white shadow-sm"
+        class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center transition-all hover:bg-white shadow-sm touch-manipulation z-10"
         @click="toggleFav"
         :aria-label="favoritesStore.isFavorited(car.id) ? 'Remove from saved' : 'Save car'"
       >
@@ -91,7 +91,7 @@ const toggleCompare = (e: Event) => {
       <!-- Compare checkbox -->
       <label
         v-if="showCompare"
-        class="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-lg px-2 py-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity shadow-sm"
+        class="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-lg px-2.5 py-1.5 cursor-pointer opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity shadow-sm touch-manipulation z-10"
         @click.stop
       >
         <input

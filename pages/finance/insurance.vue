@@ -29,7 +29,7 @@ const estimatedPremium = computed(() => {
     </div>
 
     <div class="max-w-2xl mx-auto px-4 sm:px-6 py-10">
-      <div class="bg-surface border border-border rounded-2xl p-6 space-y-6">
+      <div class="bg-surface border border-border rounded-2xl p-4 sm:p-6 space-y-6">
         <div>
           <div class="flex justify-between mb-2">
             <label class="text-sm text-muted">Vehicle Value (LKR)</label>
@@ -44,7 +44,7 @@ const estimatedPremium = computed(() => {
             v-model.number="vehicleYear"
             type="number"
             :min="2000"
-            :max="2024"
+            :max="2026"
             class="w-full bg-background border border-border rounded-xl px-4 py-2.5 text-gray-900 focus:outline-none focus:border-primary"
           />
         </div>
@@ -55,7 +55,7 @@ const estimatedPremium = computed(() => {
             <button
               v-for="t in ['personal', 'commercial']"
               :key="t"
-              :class="['flex-1 py-2.5 text-sm rounded-xl border transition-colors capitalize', usageType === t ? 'bg-primary border-primary text-white' : 'border-border text-muted hover:text-gray-900 bg-background']"
+              :class="['flex-1 py-2.5 text-sm rounded-xl border transition-colors capitalize min-h-[44px] touch-manipulation', usageType === t ? 'bg-primary border-primary text-white font-bold' : 'border-border text-muted hover:text-gray-900 bg-background']"
               @click="usageType = t as any"
             >{{ t }}</button>
           </div>
@@ -67,7 +67,7 @@ const estimatedPremium = computed(() => {
             <button
               v-for="t in [{ val: 'third-party', label: 'Third Party' }, { val: 'comprehensive', label: 'Comprehensive' }]"
               :key="t.val"
-              :class="['flex-1 py-2.5 text-sm rounded-xl border transition-colors', coverageType === t.val ? 'bg-primary border-primary text-white' : 'border-border text-muted hover:text-gray-900 bg-background']"
+              :class="['flex-1 py-2.5 text-sm rounded-xl border transition-colors min-h-[44px] touch-manipulation', coverageType === t.val ? 'bg-primary border-primary text-white font-bold' : 'border-border text-muted hover:text-gray-900 bg-background']"
               @click="coverageType = t.val as any"
             >{{ t.label }}</button>
           </div>

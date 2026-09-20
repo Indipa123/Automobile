@@ -36,7 +36,7 @@ const brands = [
       <!-- Buying Guides -->
       <section>
         <SectionTitle eyebrow="Editors' Picks">Buying Guides & Top Lists</SectionTitle>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
           <NuxtLink
             v-for="guide in guides"
             :key="guide.title"

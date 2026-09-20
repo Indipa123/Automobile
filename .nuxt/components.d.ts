@@ -36,6 +36,7 @@ export const PriceRangeCards: typeof import("../components/home/PriceRangeCards.
 export const RecentReviews: typeof import("../components/home/RecentReviews.vue")['default']
 export const AppFooter: typeof import("../components/layout/AppFooter.vue")['default']
 export const AppHeader: typeof import("../components/layout/AppHeader.vue")['default']
+export const MobileBottomNav: typeof import("../components/layout/MobileBottomNav.vue")['default']
 export const MobileMenu: typeof import("../components/layout/MobileMenu.vue")['default']
 export const SearchBar: typeof import("../components/layout/SearchBar.vue")['default']
 export const NewsCard: typeof import("../components/news/NewsCard.vue")['default']
@@ -97,6 +98,7 @@ export const LazyPriceRangeCards: LazyComponent<typeof import("../components/hom
 export const LazyRecentReviews: LazyComponent<typeof import("../components/home/RecentReviews.vue")['default']>
 export const LazyAppFooter: LazyComponent<typeof import("../components/layout/AppFooter.vue")['default']>
 export const LazyAppHeader: LazyComponent<typeof import("../components/layout/AppHeader.vue")['default']>
+export const LazyMobileBottomNav: LazyComponent<typeof import("../components/layout/MobileBottomNav.vue")['default']>
 export const LazyMobileMenu: LazyComponent<typeof import("../components/layout/MobileMenu.vue")['default']>
 export const LazySearchBar: LazyComponent<typeof import("../components/layout/SearchBar.vue")['default']>
 export const LazyNewsCard: LazyComponent<typeof import("../components/news/NewsCard.vue")['default']>
