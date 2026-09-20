@@ -1,44 +1,44 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getResponseStatus, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getResponseStatus, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file://E:/DTL/Automobile/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://E:/DTL/Automobile/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://E:/DTL/Automobile/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://E:/DTL/Automobile/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://E:/DTL/Automobile/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://E:/DTL/Automobile/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://E:/DTL/Automobile/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://E:/DTL/Automobile/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://E:/DTL/Automobile/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://E:/DTL/Automobile/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://E:/DTL/Automobile/node_modules/devalue/index.js';
-import { isVNode, isRef, toValue } from 'file://E:/DTL/Automobile/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://E:/DTL/Automobile/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://E:/DTL/Automobile/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://E:/DTL/Automobile/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://E:/DTL/Automobile/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://E:/DTL/Automobile/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://E:/DTL/Automobile/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://E:/DTL/Automobile/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://E:/DTL/Automobile/node_modules/radix3/dist/index.mjs';
+import { escapeHtml } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/vue/server-renderer/index.mjs';
+import destr, { destr as destr$1 } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/destr/dist/index.mjs';
+import { createHooks } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/indipaayomal/dev/Automobile/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/ohash/dist/index.mjs';
+import { klona } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/scule/dist/index.mjs';
+import { getContext } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/unctx/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://E:/DTL/Automobile/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://E:/DTL/Automobile/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://E:/DTL/Automobile/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://E:/DTL/Automobile/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/youch-core/build/index.js';
+import { Youch } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://E:/DTL/Automobile/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://E:/DTL/Automobile/node_modules/errx/dist/index.js';
-import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file://E:/DTL/Automobile/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
+import { stringify, uneval } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/devalue/index.js';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/errx/dist/index.js';
+import { isVNode, isRef, toValue } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/vue/index.mjs';
+import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file:///Users/indipaayomal/dev/Automobile/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$1, isAbsolute } from 'file://E:/DTL/Automobile/node_modules/pathe/dist/index.mjs';
-import { walkResolver } from 'file://E:/DTL/Automobile/node_modules/unhead/dist/utils.mjs';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://E:/DTL/Automobile/node_modules/ipx/dist/index.mjs';
+import { dirname as dirname$1, resolve as resolve$1, isAbsolute } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/pathe/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/unhead/dist/server.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/unhead/dist/plugins.mjs';
+import { walkResolver } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/unhead/dist/utils.mjs';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file:///Users/indipaayomal/dev/Automobile/node_modules/ipx/dist/index.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"E:/DTL/Automobile/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/Users/indipaayomal/dev/Automobile/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -50,11 +50,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"E:/DTL/Automobile","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"E:/DTL/Automobile/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"E:/DTL/Automobile/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"E:/DTL/Automobile/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"E:/DTL/Automobile/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/indipaayomal/dev/Automobile","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/indipaayomal/dev/Automobile/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/indipaayomal/dev/Automobile/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/indipaayomal/dev/Automobile/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/indipaayomal/dev/Automobile/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -708,6 +708,11 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
     }
     return void 0;
   }
+});
+
+getContext("nitro-app", {
+  asyncContext: false,
+  AsyncLocalStorage: void 0
 });
 
 const config = useRuntimeConfig();
@@ -2037,13 +2042,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _5ewMsd0kJo35tZo1QdanM4fpPRKVCmM_29Uenatoic = (function(nitro) {
+const __SeFFzSk3UWcjqTX_iLRuhWdkq8zfWVc4Dw5cxKps4 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script$1}<\/script>`);
   });
 });
 
-const rootDir = "E:/DTL/Automobile";
+const rootDir = "/Users/indipaayomal/dev/Automobile";
 
 const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Buy and sell new and used cars in Sri Lanka. Expert reviews, price comparisons, dealer directory, and finance tools."},{"property":"og:title","content":"Automobile.lk"},{"property":"og:description","content":"Sri Lanka's #1 Automobile Marketplace"},{"property":"og:type","content":"website"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Automobile.lk — Sri Lanka's #1 Car Marketplace"};
 
@@ -2068,7 +2073,7 @@ const asyncContext = getContext("nuxt-dev", {
 	asyncContext: true,
 	AsyncLocalStorage
 });
-const _Slm3XNRNyS_ZE_8xPbxY62eWvO6epL7VAD6txZZXOno = (nitroApp) => {
+const _1qB28YnmRMJT8mw_LtpetgKtvs_IALkuiCWUOaivUe0 = (nitroApp) => {
 	const handler = nitroApp.h3App.handler;
 	nitroApp.h3App.handler = (event) => {
 		return asyncContext.callAsync({
@@ -2143,16 +2148,16 @@ function onConsoleLog(callback) {
 
 const script = "\"use strict\";(()=>{const t=window,e=document.documentElement,c=[\"dark\",\"light\"],n=getStorageValue(\"localStorage\",\"nuxt-color-mode\")||\"dark\";let i=n===\"system\"?u():n;const r=e.getAttribute(\"data-color-mode-forced\");r&&(i=r),l(i),t[\"__NUXT_COLOR_MODE__\"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.add(s):e.className+=\" \"+s,a&&e.setAttribute(\"data-\"+a,o)}function d(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,\"g\"),\"\"),a&&e.removeAttribute(\"data-\"+a)}function f(o){return t.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function u(){if(t.matchMedia&&f(\"\").media!==\"not all\"){for(const o of c)if(f(\":\"+o).matches)return o}return\"dark\"}})();function getStorageValue(t,e){switch(t){case\"localStorage\":return window.localStorage.getItem(e);case\"sessionStorage\":return window.sessionStorage.getItem(e);case\"cookie\":return getCookie(e);default:return null}}function getCookie(t){const c=(\"; \"+window.document.cookie).split(\"; \"+t+\"=\");if(c.length===2)return c.pop()?.split(\";\").shift()}";
 
-const _BrFqE7_AoYZfQnSfxlAQf4MZaJthrVfqd7BxMsIXqks = (function(nitro) {
+const _QMsKd4WkbZdd1wKfheLn4HU5lBAhl5Jsqc3cvnEMY6I = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _5ewMsd0kJo35tZo1QdanM4fpPRKVCmM_29Uenatoic,
-_Slm3XNRNyS_ZE_8xPbxY62eWvO6epL7VAD6txZZXOno,
-_BrFqE7_AoYZfQnSfxlAQf4MZaJthrVfqd7BxMsIXqks,
+  __SeFFzSk3UWcjqTX_iLRuhWdkq8zfWVc4Dw5cxKps4,
+_1qB28YnmRMJT8mw_LtpetgKtvs_IALkuiCWUOaivUe0,
+_QMsKd4WkbZdd1wKfheLn4HU5lBAhl5Jsqc3cvnEMY6I,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
@@ -2181,7 +2186,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _ymzPln = eventHandler((event) => {
+const _rXqLSG = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -2323,9 +2328,9 @@ function publicAssetsURL(...path) {
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
 // @ts-expect-error file will be produced after app build
-const getServerEntry = () => import('file://E:/DTL/Automobile/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('file:///Users/indipaayomal/dev/Automobile/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
 // @ts-expect-error file will be produced after app build
-const getClientManifest = () => import('file://E:/DTL/Automobile/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file:///Users/indipaayomal/dev/Automobile/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 // -- SSR Renderer --
 const getSSRRenderer = lazyCachedFunction(async () => {
 	// Load server bundle
@@ -2715,8 +2720,14 @@ const mockCars = [
     seats: 5,
     driveType: "fwd",
     features: ["Reverse Camera", "Apple CarPlay", "Lane Assist", "Heated Seats", "Sunroof", "LED Headlights"],
-    images: ["https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Colombo", city: "Colombo 05", lat: 6.893, lng: 79.847 },
+    images: [
+      "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Colombo", city: "Colombo 04", lat: 6.887, lng: 79.851 },
+    dealerId: "d1",
     sellerType: "dealer",
     dealRating: "great",
     marketValue: 95e5,
@@ -2725,7 +2736,7 @@ const mockCars = [
     views: 1842,
     featured: true,
     fuelConsumption: "26 km/L",
-    description: "Well-maintained Toyota Prius Hybrid. Single owner. Full service history available.",
+    description: "Well-maintained Toyota Prius Hybrid directly from Prima Auto Lanka showroom. Single Japanese auction owner. Full service history and 3-year warranty included.",
     length: 4575,
     width: 1760,
     height: 1470,
@@ -2753,8 +2764,14 @@ const mockCars = [
     seats: 5,
     driveType: "fwd",
     features: ["Honda Sensing", "Apple CarPlay", "Android Auto", "Wireless Charging", "Panoramic Roof", "LED Headlights", "Adaptive Cruise Control"],
-    images: ["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Gampaha", city: "Negombo", lat: 7.209, lng: 79.838 },
+    images: [
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Gampaha", city: "Ja-Ela", lat: 7.073, lng: 79.893 },
+    dealerId: "d2",
     sellerType: "dealer",
     dealRating: "good",
     marketValue: 132e5,
@@ -2786,8 +2803,14 @@ const mockCars = [
     seats: 7,
     driveType: "4wd",
     features: ["360 Camera", "Terrain Monitor", "Heated/Cooled Seats", "Mark Levinson Audio", "Sunroof", "Power Running Boards", "Apple CarPlay"],
-    images: ["https://images.unsplash.com/photo-1583267746897-2cf415887172?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Colombo", city: "Colombo 03", lat: 6.912, lng: 79.854 },
+    images: [
+      "https://images.unsplash.com/photo-1583267746897-2cf415887172?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Colombo", city: "Colombo 04", lat: 6.887, lng: 79.851 },
+    dealerId: "d1",
     sellerType: "dealer",
     dealRating: "great",
     marketValue: 35e6,
@@ -2819,8 +2842,13 @@ const mockCars = [
     seats: 5,
     driveType: "fwd",
     features: ["ABS", "Airbags", "Power Steering", "Remote Key", "USB Charging"],
-    images: ["https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Central", district: "Kandy", city: "Kandy", lat: 7.29, lng: 80.634 },
+    images: [
+      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Central", district: "Kandy", city: "Kandy", lat: 7.289, lng: 80.632 },
+    dealerId: "d4",
     sellerType: "dealer",
     dealRating: "good",
     marketValue: 195e4,
@@ -2852,8 +2880,14 @@ const mockCars = [
     seats: 5,
     driveType: "rwd",
     features: ["M Sport Package", "Adaptive LED", "HUD", "Harman Kardon Audio", "Parking Assist", "Apple CarPlay", "Heated Seats"],
-    images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Colombo", city: "Colombo 07", lat: 6.899, lng: 79.861 },
+    images: [
+      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Colombo", city: "Colombo 03", lat: 6.895, lng: 79.855 },
+    dealerId: "d3",
     sellerType: "dealer",
     dealRating: "fair",
     marketValue: 215e5,
@@ -2885,8 +2919,14 @@ const mockCars = [
     seats: 7,
     driveType: "awd",
     features: ["ProPILOT Assist", "Around View Monitor", "Bose Audio", "Dual Zone A/C", "Power Tailgate"],
-    images: ["https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Southern", district: "Galle", city: "Galle", lat: 6.053, lng: 80.22 },
+    images: [
+      "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Gampaha", city: "Ja-Ela", lat: 7.073, lng: 79.893 },
+    dealerId: "d2",
     sellerType: "dealer",
     dealRating: "good",
     marketValue: 15e6,
@@ -2918,8 +2958,14 @@ const mockCars = [
     seats: 5,
     driveType: "rwd",
     features: ["AMG Styling", "Burmester Audio", "MBUX", "Heated Seats", "Panoramic Sunroof", "LED Headlights", "Wireless Charging"],
-    images: ["https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Colombo", city: "Colombo 01", lat: 6.921, lng: 79.857 },
+    images: [
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Colombo", city: "Colombo 03", lat: 6.895, lng: 79.855 },
+    dealerId: "d3",
     sellerType: "dealer",
     dealRating: "fair",
     marketValue: 275e5,
@@ -2951,8 +2997,14 @@ const mockCars = [
     seats: 7,
     driveType: "awd",
     features: ["PHEV", "MI-PILOT Assist", "Surround View Camera", "Bose Audio", "Power Tailgate", "Heated Steering"],
-    images: ["https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "North Western", district: "Kurunegala", city: "Kurunegala", lat: 7.487, lng: 80.362 },
+    images: [
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Colombo", city: "Colombo 09", lat: 6.919, lng: 79.863 },
+    dealerId: "d6",
     sellerType: "dealer",
     dealRating: "good",
     marketValue: 195e5,
@@ -2984,9 +3036,15 @@ const mockCars = [
     seats: 5,
     driveType: "fwd",
     features: ["Honda Sensing", "Wireless Charging", "Apple CarPlay", "Magic Seats", "LED Headlights"],
-    images: ["https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Gampaha", city: "Gampaha", lat: 7.09, lng: 80.013 },
-    sellerType: "private",
+    images: [
+      "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Gampaha", city: "Ja-Ela", lat: 7.073, lng: 79.893 },
+    dealerId: "d2",
+    sellerType: "dealer",
     dealRating: "great",
     marketValue: 6e6,
     safetyRating: 4,
@@ -3017,8 +3075,14 @@ const mockCars = [
     seats: 5,
     driveType: "awd",
     features: ["SmartSense Safety", "Bose Audio", "Head-Up Display", "Remote Start", "Ventilated Seats", "Panoramic Sunroof"],
-    images: ["https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Colombo", city: "Colombo 10", lat: 6.921, lng: 79.862 },
+    images: [
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Central", district: "Kandy", city: "Kandy", lat: 7.289, lng: 80.632 },
+    dealerId: "d4",
     sellerType: "dealer",
     dealRating: "good",
     marketValue: 172e5,
@@ -3050,8 +3114,14 @@ const mockCars = [
     seats: 5,
     driveType: "4wd",
     features: ["Around View Monitor", "ADAS Safety Suite", "Rear Diff Lock", "Apple CarPlay", "Wireless Charging"],
-    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "North Central", district: "Anuradhapura", city: "Anuradhapura", lat: 8.311, lng: 80.403 },
+    images: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1583267746897-2cf415887172?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Southern", district: "Galle", city: "Galle", lat: 6.055, lng: 80.218 },
+    dealerId: "d5",
     sellerType: "dealer",
     dealRating: "great",
     marketValue: 135e5,
@@ -3083,8 +3153,14 @@ const mockCars = [
     seats: 5,
     driveType: "awd",
     features: ["800V Ultra Fast Charging", "V2L Technology", "Meridian Audio", "HUD", "Remote Smart Parking", "Full ADAS Suite"],
-    images: ["https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=450&fit=crop&auto=format"],
-    location: { province: "Western", district: "Colombo", city: "Colombo 06", lat: 6.878, lng: 79.856 },
+    images: [
+      "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=450&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=450&fit=crop&auto=format"
+    ],
+    location: { province: "Western", district: "Colombo", city: "Colombo 09", lat: 6.919, lng: 79.863 },
+    dealerId: "d6",
     sellerType: "dealer",
     dealRating: "good",
     marketValue: 305e5,
@@ -3096,7 +3172,1384 @@ const mockCars = [
   }
 ];
 
-const _UWxhfu = lazyEventHandler(() => {
+const mockDealers = [
+  {
+    id: "d1",
+    name: "Prima Auto Lanka",
+    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=160&h=160&fit=crop&auto=format",
+    bannerImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&h=500&fit=crop&auto=format",
+    showroomImages: [
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=500&fit=crop&auto=format"
+    ],
+    province: "Western",
+    district: "Colombo",
+    address: "142 Galle Road, Colombo 04",
+    phone: "+94 11 234 5678",
+    whatsapp: "+94 77 234 5678",
+    email: "sales@primaautolanka.lk",
+    website: "https://primaautolanka.lk",
+    rating: 4.8,
+    reviewCount: 124,
+    listingCount: 89,
+    specialization: ["Toyota Specialists", "Hybrid Vehicles", "Brand New & Reconditioned", "EV Ready"],
+    verified: true,
+    lat: 6.887,
+    lng: 79.851,
+    description: "Premier authorized automobile dealership in Sri Lanka with over 20 years of excellence. Specializing in genuine Japanese imports, certified hybrid maintenance, and factory-fresh luxury vehicles with full 3-year warranties.",
+    established: 2003,
+    openHours: "Mon - Sat: 8:30 AM - 6:30 PM",
+    openingHours: {
+      weekdays: "8:30 AM - 6:30 PM",
+      saturday: "9:00 AM - 5:00 PM",
+      sunday: "10:00 AM - 2:00 PM (By Appointment)"
+    },
+    services: [
+      "Official Dealership Warranty (3 Years / 100,000 km)",
+      "Speedy Bank Lease Assistance (1-day pre-approval)",
+      "Guaranteed Trade-In & Vehicle Exchange Valuations",
+      "Doorstep Test Drives & VIP Home Consultations",
+      "Government Registration & Revenue License Handling"
+    ],
+    badges: ["Top Rated Dealer 2024", "Verified Showroom", "Hybrid Certified", "Direct Importer"],
+    reviewsList: [
+      {
+        id: "dr1",
+        author: "Damith Wickramasinghe",
+        rating: 5,
+        date: "2024-11-20",
+        comment: "Purchased a 2022 Prius from Prima Auto Lanka. The entire process was transparent, all auction sheets were verified Japanese originals, and loan approval took only 24 hours. Highly recommended!",
+        vehiclePurchased: "2022 Toyota Prius Hybrid G",
+        verifiedBuyer: true
+      },
+      {
+        id: "dr2",
+        author: "Chaminda Silva",
+        rating: 5,
+        date: "2024-10-14",
+        comment: "Outstanding customer care. Their showroom in Bambalapitiya is state of the art and their staff explained the hybrid battery warranty thoroughly.",
+        vehiclePurchased: "2023 Toyota Land Cruiser Prado",
+        verifiedBuyer: true
+      },
+      {
+        id: "dr3",
+        author: "Anura Bandara",
+        rating: 4.5,
+        date: "2024-09-02",
+        comment: "Great selection of hybrid cars with authentic mileage certificates. Very professional team.",
+        vehiclePurchased: "2021 Toyota Corolla Cross",
+        verifiedBuyer: true
+      }
+    ]
+  },
+  {
+    id: "d2",
+    name: "Millennium Motors",
+    logo: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=160&h=160&fit=crop&auto=format",
+    bannerImage: "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=1600&h=500&fit=crop&auto=format",
+    showroomImages: [
+      "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=500&fit=crop&auto=format"
+    ],
+    province: "Western",
+    district: "Gampaha",
+    address: "28 Negombo Road, Ja-Ela",
+    phone: "+94 11 345 6789",
+    whatsapp: "+94 77 345 6789",
+    email: "info@millenniummotors.lk",
+    website: "https://millenniummotors.lk",
+    rating: 4.6,
+    reviewCount: 87,
+    listingCount: 145,
+    specialization: ["Used Cars", "Japanese SUVs", "Honda e:HEV", "Family Vans"],
+    verified: true,
+    lat: 7.073,
+    lng: 79.893,
+    description: "One of the largest vehicle showrooms in the Gampaha district with over 140+ verified vehicles on display. Specializing in immaculate Japanese pre-owned SUVs, compact city hatchbacks, and fuel-efficient family crossovers.",
+    established: 2008,
+    openHours: "Mon - Sun: 8:00 AM - 7:00 PM",
+    openingHours: {
+      weekdays: "8:00 AM - 7:00 PM",
+      saturday: "8:00 AM - 6:00 PM",
+      sunday: "9:00 AM - 4:00 PM"
+    },
+    services: [
+      "Comprehensive 150-Point Pre-Purchase Inspection Report",
+      "Special Low-Interest Leasing via Major Banks",
+      "Direct Vehicle Exchange with Best Market Value",
+      "Free 1-Year Comprehensive Lube & Oil Maintenance"
+    ],
+    badges: ["Gampaha #1 Volume Dealer", "Verified Showroom", "150-Point Checked"],
+    reviewsList: [
+      {
+        id: "dr4",
+        author: "Niroshan Fonseka",
+        rating: 5,
+        date: "2024-12-01",
+        comment: "Bought my Honda Vezel e:HEV here. Clean documentation, zero hidden charges, and hassle-free registration.",
+        vehiclePurchased: "2023 Honda Vezel e:HEV",
+        verifiedBuyer: true
+      },
+      {
+        id: "dr5",
+        author: "Priyantha Jayasuriya",
+        rating: 4,
+        date: "2024-11-05",
+        comment: "Huge showroom with lots of options. Negotiable pricing and polite staff.",
+        vehiclePurchased: "2022 Nissan X-Trail",
+        verifiedBuyer: true
+      }
+    ]
+  },
+  {
+    id: "d3",
+    name: "Luxury Auto Gallery",
+    logo: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=160&h=160&fit=crop&auto=format",
+    bannerImage: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1600&h=500&fit=crop&auto=format",
+    showroomImages: [
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=500&fit=crop&auto=format"
+    ],
+    province: "Western",
+    district: "Colombo",
+    address: "56 Duplication Road, Colombo 03",
+    phone: "+94 11 456 7890",
+    whatsapp: "+94 77 456 7890",
+    email: "concierge@luxuryautogallery.lk",
+    website: "https://luxuryautogallery.lk",
+    rating: 4.9,
+    reviewCount: 62,
+    listingCount: 34,
+    specialization: ["European Luxury", "BMW M Series", "Mercedes-AMG", "Porsche", "Audi S-Line"],
+    verified: true,
+    lat: 6.895,
+    lng: 79.855,
+    description: "Colombo\u2019s premier boutique showroom for European performance and luxury marques. Each vehicle is hand-selected from authorized dealers in the UK, Germany, and Japan with meticulous service records.",
+    established: 2015,
+    openHours: "Mon - Sat: 9:00 AM - 7:00 PM",
+    openingHours: {
+      weekdays: "9:00 AM - 7:00 PM",
+      saturday: "9:30 AM - 5:30 PM",
+      sunday: "Private Appointments Only"
+    },
+    services: [
+      "Bespoke European Import Sourcing on Demand",
+      "Private VIP Viewing Lounge & Test Drive Service",
+      "Ceramic Coating & Paint Protection Film (PPF) Pre-delivery",
+      "Exclusive Tailored Financial & Lease Concierge"
+    ],
+    badges: ["Luxury Specialist", "Verified VIP Dealer", "European Import Award"],
+    reviewsList: [
+      {
+        id: "dr6",
+        author: "Roshan Samarasinghe",
+        rating: 5,
+        date: "2024-11-18",
+        comment: "Picked up a 2021 BMW 320i M Sport. Immaculate condition just as described. The VIP service in Colombo 03 is second to none.",
+        vehiclePurchased: "2021 BMW 3 Series 320i M Sport",
+        verifiedBuyer: true
+      },
+      {
+        id: "dr7",
+        author: "Dr. Mahesh Fernando",
+        rating: 5,
+        date: "2024-09-25",
+        comment: "Top tier luxury experience. Traded in my older C200 for a new model without any headache.",
+        vehiclePurchased: "2020 Mercedes-Benz C200 AMG Line",
+        verifiedBuyer: true
+      }
+    ]
+  },
+  {
+    id: "d4",
+    name: "Island Wide Auto",
+    logo: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=160&h=160&fit=crop&auto=format",
+    bannerImage: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=1600&h=500&fit=crop&auto=format",
+    showroomImages: [
+      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=500&fit=crop&auto=format"
+    ],
+    province: "Central",
+    district: "Kandy",
+    address: "78 Peradeniya Road, Kandy",
+    phone: "+94 81 234 5678",
+    whatsapp: "+94 77 567 8901",
+    email: "kandy@islandwideauto.lk",
+    rating: 4.5,
+    reviewCount: 98,
+    listingCount: 112,
+    specialization: ["Economy Cars", "City Hatchbacks", "Family Sedans", "Used Cars"],
+    verified: true,
+    lat: 7.289,
+    lng: 80.632,
+    established: 2005,
+    openHours: "Mon - Sun: 8:30 AM - 6:00 PM",
+    openingHours: {
+      weekdays: "8:30 AM - 6:00 PM",
+      saturday: "8:30 AM - 5:00 PM",
+      sunday: "9:00 AM - 2:00 PM"
+    },
+    services: [
+      "Hill Country Vehicle Health & Brake Certifications",
+      "Affordable Leasing Options with 10% Down Payment",
+      "Instant Ownership Transfer Support"
+    ],
+    badges: ["Kandy #1 Dealer", "Verified Showroom", "Budget Friendly"],
+    reviewsList: [
+      {
+        id: "dr8",
+        author: "Kavindu Senanayake",
+        rating: 4.5,
+        date: "2024-11-10",
+        comment: "Bought a 2023 Suzuki Alto. Perfect for commuting in Kandy. The staff arranged bank leasing within two days.",
+        vehiclePurchased: "2023 Suzuki Alto VXR",
+        verifiedBuyer: true
+      }
+    ]
+  },
+  {
+    id: "d5",
+    name: "Southern Motors",
+    logo: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=160&h=160&fit=crop&auto=format",
+    bannerImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=500&fit=crop&auto=format",
+    showroomImages: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1583267746897-2cf415887172?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=500&fit=crop&auto=format"
+    ],
+    province: "Southern",
+    district: "Galle",
+    address: "34 Matara Road, Galle",
+    phone: "+94 91 234 5678",
+    whatsapp: "+94 77 678 9012",
+    rating: 4.3,
+    reviewCount: 45,
+    listingCount: 67,
+    specialization: ["4WD & Pickups", "Commercial Vehicles", "SUVs", "Used Cars"],
+    verified: true,
+    lat: 6.055,
+    lng: 80.218,
+    established: 2011,
+    openHours: "Mon - Sat: 8:00 AM - 6:00 PM",
+    openingHours: {
+      weekdays: "8:00 AM - 6:00 PM",
+      saturday: "8:00 AM - 5:00 PM",
+      sunday: "Closed"
+    },
+    services: [
+      "4x4 Drivetrain & Suspension Inspections",
+      "Commercial Fleet Leasing Support",
+      "Exchange with Outstation Vehicles"
+    ],
+    badges: ["Southern Province Specialist", "Verified 4x4 Dealer"],
+    reviewsList: [
+      {
+        id: "dr9",
+        author: "Sunil De Silva",
+        rating: 4.5,
+        date: "2024-10-22",
+        comment: "Great experience purchasing an Isuzu D-Max. Powerful machine and genuine condition.",
+        vehiclePurchased: "2022 Isuzu D-Max LS-Terrain",
+        verifiedBuyer: true
+      }
+    ]
+  },
+  {
+    id: "d6",
+    name: "EV Lanka Motors",
+    logo: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=160&h=160&fit=crop&auto=format",
+    bannerImage: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1600&h=500&fit=crop&auto=format",
+    showroomImages: [
+      "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=500&fit=crop&auto=format"
+    ],
+    province: "Western",
+    district: "Colombo",
+    address: "22 Baseline Road, Colombo 09",
+    phone: "+94 11 567 8901",
+    whatsapp: "+94 77 789 0123",
+    rating: 4.7,
+    reviewCount: 38,
+    listingCount: 28,
+    specialization: ["Electric Vehicles", "PHEV Hybrids", "EV Home Charging Solutions", "Battery Health Audits"],
+    verified: true,
+    lat: 6.919,
+    lng: 79.863,
+    established: 2020,
+    openHours: "Mon - Sat: 9:00 AM - 6:30 PM",
+    openingHours: {
+      weekdays: "9:00 AM - 6:30 PM",
+      saturday: "9:00 AM - 5:00 PM",
+      sunday: "10:00 AM - 3:00 PM"
+    },
+    services: [
+      "Complimentary 7.4kW Home EV Wallbox Charger & Installation",
+      "State-of-Health (SOH) Certified EV Battery Reports",
+      "8-Year High Voltage Battery Warranty Coverage"
+    ],
+    badges: ["EV Pioneer", "Certified Battery Lab", "Verified Showroom"],
+    reviewsList: [
+      {
+        id: "dr10",
+        author: "Malinda Senaratne",
+        rating: 5,
+        date: "2024-11-28",
+        comment: "Got my Kia EV6 here. They installed the home charger within 48 hours. Excellent EV knowledge and support in Sri Lanka.",
+        vehiclePurchased: "2023 Kia EV6 Wind AWD",
+        verifiedBuyer: true
+      }
+    ]
+  }
+];
+
+const mockParts = [
+  {
+    id: "p1",
+    title: "Genuine Toyota Electric Inverter Water Pump Assembly",
+    slug: "genuine-toyota-inverter-water-pump-zvw50-zvw30",
+    partNumber: "G9040-48020",
+    oemNumber: "G9040-52010",
+    brand: "Toyota Genuine",
+    category: "engine",
+    categoryLabel: "Engine & Hybrid System",
+    price: 38500,
+    originalPrice: 45e3,
+    condition: "brand-new-oem",
+    vehicleType: "Car",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Prius",
+        yearRange: "2015-2023",
+        chassisCodes: ["ZVW50", "ZVW51", "ZVW52", "ZVW55", "ZVW30"]
+      },
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Aqua",
+        yearRange: "2012-2021",
+        chassisCodes: ["NHP10"]
+      },
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Corolla Axio Hybrid",
+        yearRange: "2013-2022",
+        chassisCodes: ["NKE165"]
+      }
+    ],
+    chassisCodes: ["ZVW50", "ZVW51", "ZVW52", "ZVW55", "ZVW30", "NHP10", "NKE165"],
+    inStock: true,
+    stockQuantity: 14,
+    warranty: "1 Year / 20,000 km Replacement Warranty",
+    rating: 4.9,
+    reviewCount: 38,
+    images: [
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "100% Genuine Made in Japan inverter coolant water pump. Essential replacement to prevent hybrid inverter overheating and inverter warning light check codes. Comes in original Toyota packaging with holographic seal.",
+    specifications: {
+      "Manufacturer": "Toyota Motor Corporation (Aisin Japan)",
+      "Voltage": "12V DC Electric",
+      "Country of Origin": "Japan",
+      "Part Type": "Hybrid Inverter Cooling Pump",
+      "Fitting Position": "Engine Bay Front Left"
+    },
+    seller: {
+      id: "d1",
+      name: "Prima Auto Lanka Parts Division",
+      verified: true,
+      location: "Colombo 04",
+      phone: "+94 11 234 5678",
+      whatsapp: "+94 77 234 5678",
+      rating: 4.9,
+      storeId: "d1"
+    },
+    featured: true,
+    badge: "OEM Genuine"
+  },
+  {
+    id: "p2",
+    title: "Panasonic OEM Certified Hybrid Battery Pack (Reconditioned / Cells Tested)",
+    slug: "panasonic-oem-hybrid-battery-zvw50-zvw30-nhp10",
+    partNumber: "G9510-47062",
+    oemNumber: "G9510-47060",
+    brand: "Panasonic / Toyota OEM",
+    category: "batteries",
+    categoryLabel: "Hybrid & EV Batteries",
+    price: 345e3,
+    originalPrice: 38e4,
+    condition: "reconditioned",
+    vehicleType: "Car",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Prius",
+        yearRange: "2016-2022",
+        chassisCodes: ["ZVW50", "ZVW51", "ZVW30"]
+      },
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Aqua",
+        yearRange: "2012-2020",
+        chassisCodes: ["NHP10"]
+      }
+    ],
+    chassisCodes: ["ZVW50", "ZVW51", "ZVW30", "NHP10"],
+    inStock: true,
+    stockQuantity: 5,
+    warranty: "2 Years Comprehensive Warranty with Free Battery Health Audit",
+    rating: 4.8,
+    reviewCount: 29,
+    images: [
+      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Fully re-balanced and impedance-tested NiMH hybrid battery pack featuring brand-new Panasonic Grade-A matched cells. Restores original factory fuel consumption (25+ km/L) and instant torque response.",
+    specifications: {
+      "Cell Chemistry": "Nickel-Metal Hydride (Ni-MH)",
+      "Nominal Voltage": "201.6V (28 Modules x 7.2V)",
+      "Capacity": "6.5 Ah Tested",
+      "Diagnostic Report": "Included with individual cell IR readings",
+      "Installation": "Free installation available at Colombo showroom"
+    },
+    seller: {
+      id: "d6",
+      name: "EV Lanka Motors Battery Tech",
+      verified: true,
+      location: "Colombo 09",
+      phone: "+94 11 567 8901",
+      whatsapp: "+94 77 789 0123",
+      rating: 4.8,
+      storeId: "d6"
+    },
+    featured: true,
+    badge: "Hybrid Certified"
+  },
+  {
+    id: "p3",
+    title: "Akebono Japan Ceramic Ultra-Quiet Front Brake Pads Set",
+    slug: "akebono-ceramic-front-brake-pads-honda-vezel-fit",
+    partNumber: "AN-753WK",
+    oemNumber: "45022-T7A-J00",
+    brand: "Akebono",
+    category: "suspension-brakes",
+    categoryLabel: "Brakes & Suspension",
+    price: 16800,
+    originalPrice: 19500,
+    condition: "brand-new-oem",
+    vehicleType: "SUV",
+    compatibleVehicles: [
+      {
+        type: "SUV",
+        make: "Honda",
+        model: "Vezel",
+        yearRange: "2014-2023",
+        chassisCodes: ["RU1", "RU2", "RU3", "RU4", "RV3", "RV5"]
+      },
+      {
+        type: "Car",
+        make: "Honda",
+        model: "Fit",
+        yearRange: "2014-2022",
+        chassisCodes: ["GP5", "GP6", "GK3", "GK5"]
+      },
+      {
+        type: "Car",
+        make: "Honda",
+        model: "Grace",
+        yearRange: "2014-2020",
+        chassisCodes: ["GM4", "GM5"]
+      },
+      {
+        type: "Car",
+        make: "Honda",
+        model: "Civic",
+        yearRange: "2016-2021",
+        chassisCodes: ["FK7", "FC1"]
+      }
+    ],
+    chassisCodes: ["RU1", "RU2", "RU3", "RU4", "RV3", "RV5", "GP5", "GP6", "GK3", "GK5", "GM4", "GM5", "FK7", "FC1"],
+    inStock: true,
+    stockQuantity: 28,
+    warranty: "6 Months / 15,000 km Warranty",
+    rating: 4.9,
+    reviewCount: 47,
+    images: [
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Premier Akebono Pro-ACT ceramic disc brake pads engineered in Japan. Delivers maximum stopping power, zero brake squeal, and ultra-low rotor dust for Honda Vezel and Fit models.",
+    specifications: {
+      "Friction Material": "Advanced Ceramic Matrix",
+      "Position": "Front Axle (Left & Right)",
+      "Shim": "Multi-layered Rubberized Anti-Squeal Shim Included",
+      "Country of Origin": "Japan"
+    },
+    seller: {
+      id: "d2",
+      name: "Millennium Motors Parts Outlet",
+      verified: true,
+      location: "Ja-Ela, Negombo Rd",
+      phone: "+94 11 345 6789",
+      whatsapp: "+94 77 345 6789",
+      rating: 4.7,
+      storeId: "d2"
+    },
+    featured: true,
+    badge: "Best Seller"
+  },
+  {
+    id: "p4",
+    title: "Mobil 1 Advanced Fuel Economy 0W-20 Full Synthetic Engine Oil (4 Litres)",
+    slug: "mobil-1-0w20-advanced-fuel-economy-4l",
+    partNumber: "MOB-0W20-4L",
+    brand: "Mobil 1",
+    category: "lubricants-fluids",
+    categoryLabel: "Lubricants & Fluids",
+    price: 24500,
+    originalPrice: 27e3,
+    condition: "brand-new-oem",
+    vehicleType: "Universal",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Prius / Aqua / Corolla",
+        yearRange: "2012-2024",
+        chassisCodes: ["ZVW50", "ZVW30", "NHP10", "NZE161", "E210"]
+      },
+      {
+        type: "SUV",
+        make: "Honda",
+        model: "Vezel / CR-V / Fit",
+        yearRange: "2014-2024",
+        chassisCodes: ["RU3", "RV5", "GP5", "RW1"]
+      },
+      {
+        type: "Car",
+        make: "Suzuki",
+        model: "Alto / Wagon R / Hustler",
+        yearRange: "2015-2024",
+        chassisCodes: ["HA36S", "MH44S", "MH55S", "MR31S"]
+      }
+    ],
+    chassisCodes: ["ZVW50", "ZVW30", "NHP10", "NZE161", "E210", "RU3", "RV5", "GP5", "RW1", "HA36S", "MH44S", "MH55S", "MR31S"],
+    inStock: true,
+    stockQuantity: 65,
+    warranty: "100% Genuine Product Guarantee with Verification QR",
+    rating: 5,
+    reviewCount: 92,
+    images: [
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Mobil 1 0W-20 is an advanced full synthetic engine oil designed to help deliver outstanding engine protection and enhanced fuel economy benefits. Ideal for modern Japanese hybrid and direct-injection petrol engines.",
+    specifications: {
+      "Viscosity Grade": "SAE 0W-20",
+      "API Service": "API SP / SN PLUS / SN",
+      "ILSAC Rating": "GF-6A Resource Conserving",
+      "Volume": "4 Litres Bottle (Made in USA / Singapore)",
+      "Recommended Drain Interval": "10,000 km or 12 months"
+    },
+    seller: {
+      id: "d1",
+      name: "Prima Auto Lanka Parts Division",
+      verified: true,
+      location: "Colombo 04",
+      phone: "+94 11 234 5678",
+      whatsapp: "+94 77 234 5678",
+      rating: 4.9,
+      storeId: "d1"
+    },
+    featured: true,
+    badge: "Popular Choice"
+  },
+  {
+    id: "p5",
+    title: "Castrol EDGE Titanium FST 5W-30 Full Synthetic Motor Oil (4 Litres)",
+    slug: "castrol-edge-5w30-titanium-fst-4l",
+    partNumber: "CAS-5W30-4L",
+    brand: "Castrol",
+    category: "lubricants-fluids",
+    categoryLabel: "Lubricants & Fluids",
+    price: 26800,
+    originalPrice: 29500,
+    condition: "brand-new-oem",
+    vehicleType: "Universal",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "BMW",
+        model: "3 Series / 5 Series",
+        yearRange: "2012-2024",
+        chassisCodes: ["F30", "G20", "F10", "G30"]
+      },
+      {
+        type: "Car",
+        make: "Mercedes-Benz",
+        model: "C-Class / E-Class",
+        yearRange: "2014-2024",
+        chassisCodes: ["W205", "W206", "W213"]
+      },
+      {
+        type: "SUV",
+        make: "Toyota",
+        model: "Land Cruiser Prado / Fortuner",
+        yearRange: "2010-2024",
+        chassisCodes: ["GDJ150", "TRJ150", "GUN156"]
+      }
+    ],
+    chassisCodes: ["F30", "G20", "F10", "G30", "W205", "W206", "W213", "GDJ150", "TRJ150", "GUN156", "NZE141"],
+    inStock: true,
+    stockQuantity: 42,
+    warranty: "Official Castrol Importer Genuine Seal",
+    rating: 4.8,
+    reviewCount: 54,
+    images: [
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Castrol EDGE with Fluid TITANIUM technology transforms its structure under extreme pressure to keep metal apart and reduce friction. Recommended for European luxury turbo engines and modern common-rail diesels.",
+    specifications: {
+      "Viscosity Grade": "SAE 5W-30",
+      "Approvals": "BMW Longlife-04, MB-Approval 229.51/229.52, VW 504 00/507 00",
+      "API Standard": "API SN / CF, ACEA C3",
+      "Volume": "4 Litres Canister"
+    },
+    seller: {
+      id: "d3",
+      name: "Luxury Auto Gallery Concierge",
+      verified: true,
+      location: "Colombo 03",
+      phone: "+94 11 456 7890",
+      whatsapp: "+94 77 456 7890",
+      rating: 4.9,
+      storeId: "d3"
+    },
+    badge: "European Spec"
+  },
+  {
+    id: "p6",
+    title: "KYB Japan Excel-G Front Gas Shock Absorbers (Pair Left & Right)",
+    slug: "kyb-excel-g-front-shock-absorbers-toyota-corolla-nze141",
+    partNumber: "KYB-339031-339032",
+    oemNumber: "48510-12A50",
+    brand: "KYB (Kayaba Japan)",
+    category: "suspension-brakes",
+    categoryLabel: "Brakes & Suspension",
+    price: 48500,
+    originalPrice: 56e3,
+    condition: "brand-new-oem",
+    vehicleType: "Car",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Corolla / Axio / Fielder",
+        yearRange: "2007-2016",
+        chassisCodes: ["NZE141", "NZE144", "ZRE142", "ZRE144"]
+      },
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Premio / Allion",
+        yearRange: "2007-2020",
+        chassisCodes: ["NZT260", "ZRT260", "ZRT261"]
+      }
+    ],
+    chassisCodes: ["NZE141", "NZE144", "ZRE142", "ZRE144", "NZT260", "ZRT260", "ZRT261"],
+    inStock: true,
+    stockQuantity: 12,
+    warranty: "1 Year KYB Manufacturer Warranty",
+    rating: 4.7,
+    reviewCount: 31,
+    images: [
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Original KYB Excel-G twin-tube nitrogen gas pressurized struts made in Japan. Restores OEM stability, precise handling, and comfortable ride quality over Sri Lankan road conditions.",
+    specifications: {
+      "Design": "Twin Tube Nitrogen Gas Charged",
+      "Piston Rod": "Triple Chrome Plated Induction Hardened",
+      "Fitment": "Direct Bolt-on OEM Replacement",
+      "Quantity": "Set of 2 Struts (Left & Right)"
+    },
+    seller: {
+      id: "d4",
+      name: "Island Wide Auto Kandy",
+      verified: true,
+      location: "Peradeniya Road, Kandy",
+      phone: "+94 81 234 5678",
+      whatsapp: "+94 77 567 8901",
+      rating: 4.6,
+      storeId: "d4"
+    },
+    badge: "Made in Japan"
+  },
+  {
+    id: "p7",
+    title: "Denso Iridium TT Spark Plugs (Set of 3) - Suzuki Alto & Wagon R",
+    slug: "denso-iridium-tt-spark-plugs-suzuki-alto-wagon-r",
+    partNumber: "IXUH22I",
+    oemNumber: "09482-00624",
+    brand: "Denso Japan",
+    category: "engine",
+    categoryLabel: "Engine & Ignition",
+    price: 11500,
+    originalPrice: 13500,
+    condition: "brand-new-oem",
+    vehicleType: "Car",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Suzuki",
+        model: "Alto",
+        yearRange: "2014-2023",
+        chassisCodes: ["HA36S", "HA36V", "HA25S"]
+      },
+      {
+        type: "Car",
+        make: "Suzuki",
+        model: "Wagon R",
+        yearRange: "2014-2023",
+        chassisCodes: ["MH44S", "MH55S", "MH34S"]
+      },
+      {
+        type: "Car",
+        make: "Suzuki",
+        model: "Spacia / Hustler",
+        yearRange: "2015-2023",
+        chassisCodes: ["MK42S", "MK53S", "MR31S", "MR41S"]
+      }
+    ],
+    chassisCodes: ["HA36S", "HA36V", "HA25S", "MH44S", "MH55S", "MH34S", "MK42S", "MK53S", "MR31S", "MR41S"],
+    inStock: true,
+    stockQuantity: 50,
+    warranty: "50,000 km Guaranteed Ignition Life",
+    rating: 4.9,
+    reviewCount: 66,
+    images: [
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Denso Twin-Tip Iridium & Platinum 0.4mm spark plugs engineered for Suzuki 660cc R06A engines. Solves idle shivering, cold start lag, and boosts fuel efficiency up to 26+ km/L.",
+    specifications: {
+      "Center Electrode": "0.4mm Ultra-Fine Iridium",
+      "Ground Electrode": "0.7mm Platinum Needle Tip",
+      "Thread Diameter": "12 mm",
+      "Quantity": "Pack of 3 Plugs"
+    },
+    seller: {
+      id: "d4",
+      name: "Island Wide Auto Kandy",
+      verified: true,
+      location: "Peradeniya Road, Kandy",
+      phone: "+94 81 234 5678",
+      whatsapp: "+94 77 567 8901",
+      rating: 4.6,
+      storeId: "d4"
+    },
+    badge: "Fuel Saver"
+  },
+  {
+    id: "p8",
+    title: "Brembo UV-Coated Front Ventilated Brake Discs (Pair) - Mercedes-Benz",
+    slug: "brembo-uv-coated-brake-discs-mercedes-w205-c-class",
+    partNumber: "09.C399.13",
+    oemNumber: "A0004212112",
+    brand: "Brembo Italy",
+    category: "suspension-brakes",
+    categoryLabel: "Brakes & Suspension",
+    price: 84e3,
+    originalPrice: 96e3,
+    condition: "brand-new-oem",
+    vehicleType: "Car",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Mercedes-Benz",
+        model: "C-Class Sedan & Coupe",
+        yearRange: "2014-2021",
+        chassisCodes: ["W205", "S205", "C205", "A205"]
+      },
+      {
+        type: "Car",
+        make: "Mercedes-Benz",
+        model: "E-Class",
+        yearRange: "2016-2023",
+        chassisCodes: ["W213", "S213"]
+      }
+    ],
+    chassisCodes: ["W205", "S205", "C205", "A205", "W213", "S213"],
+    inStock: true,
+    stockQuantity: 8,
+    warranty: "1 Year / 25,000 km Warranty",
+    rating: 5,
+    reviewCount: 19,
+    images: [
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "High carbon Brembo ventilated disc rotors with anti-corrosion UV coating. Specifically designed for Mercedes-Benz AMG Line braking systems with drilled cooling channels.",
+    specifications: {
+      "Diameter": "342 mm Ventilated & Perforated",
+      "Thickness": "32 mm (Minimum wear 30mm)",
+      "Coating": "UV Metallic Anti-Rust Protective Finish",
+      "Country of Origin": "Italy"
+    },
+    seller: {
+      id: "d3",
+      name: "Luxury Auto Gallery Concierge",
+      verified: true,
+      location: "Colombo 03",
+      phone: "+94 11 456 7890",
+      whatsapp: "+94 77 456 7890",
+      rating: 4.9,
+      storeId: "d3"
+    },
+    badge: "High Performance"
+  },
+  {
+    id: "p9",
+    title: "70mai A810 Flagship 4K HDR Dual Dashcam with Sony Starvis 2 & Built-in GPS",
+    slug: "70mai-a810-4k-hdr-dual-dashcam-sony-starvis-2",
+    partNumber: "70MAI-A810-KIT",
+    brand: "70mai / Xiaomi Ecosystem",
+    category: "accessories",
+    categoryLabel: "Car Tech & Accessories",
+    price: 49500,
+    originalPrice: 58e3,
+    condition: "brand-new-oem",
+    vehicleType: "Universal",
+    compatibleVehicles: [
+      {
+        type: "Universal",
+        make: "All Makes",
+        model: "Universal Fit (Cars, SUVs, Vans, Pickups, Trucks)",
+        yearRange: "2000-2025",
+        chassisCodes: ["ALL"]
+      }
+    ],
+    chassisCodes: ["ALL", "ZVW50", "RU3", "NZE141", "W205", "F30", "HA36S"],
+    inStock: true,
+    stockQuantity: 32,
+    warranty: "1 Year Complete Hardware Replacement Warranty",
+    rating: 4.9,
+    reviewCount: 78,
+    images: [
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "The ultimate automotive safety companion for Sri Lankan roads. Features true 4K Ultra HD front camera powered by Sony STARVIS 2 IMX678 sensor and 1080P rear camera. Built-in ADAS lane departure alerts, collision warning, 24-hour parking surveillance, and Sri Lanka GPS coordinates recording.",
+    specifications: {
+      "Video Resolution": "4K UHD (3840x2160) Front + 1080P HDR Rear",
+      "Image Sensor": "Sony STARVIS 2 IMX678 (Supreme Night Vision)",
+      "Display": "3.0 inch IPS Screen",
+      "Connectivity": "Built-in Wi-Fi & Smartphone App (iOS / Android)",
+      "Included in Box": "Front Cam, Rear Cam, Hardwire Kit, 64GB High-Endurance MicroSD"
+    },
+    seller: {
+      id: "d1",
+      name: "Prima Auto Lanka Parts Division",
+      verified: true,
+      location: "Colombo 04",
+      phone: "+94 11 234 5678",
+      whatsapp: "+94 77 234 5678",
+      rating: 4.9,
+      storeId: "d1"
+    },
+    featured: true,
+    badge: "Top Tech 2024"
+  },
+  {
+    id: "p10",
+    title: "7D Laser-Fitted All-Weather Luxury Floor Liners (Complete Set)",
+    slug: "7d-laser-fitted-all-weather-floor-liners-toyota-prius-zvw50",
+    partNumber: "7D-PRIUS-50-BLK",
+    brand: "Autocraft Premium",
+    category: "accessories",
+    categoryLabel: "Car Interior & Accessories",
+    price: 28500,
+    originalPrice: 34e3,
+    condition: "brand-new-oem",
+    vehicleType: "Car",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Prius",
+        yearRange: "2016-2023",
+        chassisCodes: ["ZVW50", "ZVW51", "ZVW55"]
+      }
+    ],
+    chassisCodes: ["ZVW50", "ZVW51", "ZVW55"],
+    inStock: true,
+    stockQuantity: 18,
+    warranty: "2 Years Wear & Tear Material Warranty",
+    rating: 4.8,
+    reviewCount: 35,
+    images: [
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "Precision laser-scanned 7D waterproof floor mats with deep tray design and detachable wire-loop coil layer. Shields against monsoon mud, spilled liquids, and sand while providing luxury acoustic sound dampening.",
+    specifications: {
+      "Material": "High-density EVA foam + Carbon texture leatherette + Detachable PVC curly mat",
+      "Fitment": "Custom 3D scanned for Right-Hand Drive (RHD) Sri Lankan Prius ZVW50",
+      "Waterproof": "100% Water, Mud & Oil Resistant",
+      "Pieces": "Front Driver, Front Passenger, Full Rear Row Bridge"
+    },
+    seller: {
+      id: "d1",
+      name: "Prima Auto Lanka Parts Division",
+      verified: true,
+      location: "Colombo 04",
+      phone: "+94 11 234 5678",
+      whatsapp: "+94 77 234 5678",
+      rating: 4.9,
+      storeId: "d1"
+    },
+    badge: "Custom Molded"
+  },
+  {
+    id: "p11",
+    title: "Amaron PRO Hi-Life Maintenance-Free Automotive Battery (DIN65 / 65Ah)",
+    slug: "amaron-pro-hi-life-automotive-battery-din65",
+    partNumber: "AMR-DIN65-PRO",
+    brand: "Amaron Pro",
+    category: "batteries",
+    categoryLabel: "Automotive Batteries",
+    price: 49500,
+    originalPrice: 54e3,
+    condition: "brand-new-oem",
+    vehicleType: "Universal",
+    compatibleVehicles: [
+      {
+        type: "Car",
+        make: "BMW",
+        model: "3 Series",
+        yearRange: "2012-2022",
+        chassisCodes: ["F30", "G20"]
+      },
+      {
+        type: "Car",
+        make: "Mercedes-Benz",
+        model: "C-Class",
+        yearRange: "2014-2022",
+        chassisCodes: ["W205"]
+      },
+      {
+        type: "SUV",
+        make: "Hyundai",
+        model: "Tucson / Santa Fe",
+        yearRange: "2016-2023",
+        chassisCodes: ["TL", "NX4"]
+      }
+    ],
+    chassisCodes: ["F30", "G20", "W205", "TL", "NX4"],
+    inStock: true,
+    stockQuantity: 24,
+    warranty: "3 Years Full Replacement Warranty with Amaron Hologram Card",
+    rating: 4.9,
+    reviewCount: 42,
+    images: [
+      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "High heat-resistant SilvenX alloy technology patented by Amaron. Provides incredible cranking amps and vibration resistance in Sri Lanka\u2019s tropical climate.",
+    specifications: {
+      "Capacity": "65 Ah",
+      "Cold Cranking Amps (CCA)": "600 CCA",
+      "Technology": "Silver-Alloy Maintenance Free Lead Acid",
+      "Terminal": "Standard DIN Terminal"
+    },
+    seller: {
+      id: "d3",
+      name: "Luxury Auto Gallery Concierge",
+      verified: true,
+      location: "Colombo 03",
+      phone: "+94 11 456 7890",
+      whatsapp: "+94 77 456 7890",
+      rating: 4.9,
+      storeId: "d3"
+    },
+    badge: "3-Year Warranty"
+  },
+  {
+    id: "p12",
+    title: "Michelin Primacy 4+ 215/55 R17 Premium Tyres (Set of 4)",
+    slug: "michelin-primacy-4-plus-215-55-r17-set-of-4",
+    partNumber: "MICH-2155517-P4P",
+    brand: "Michelin",
+    category: "tyres-wheels",
+    categoryLabel: "Tyres & Wheels",
+    price: 215e3,
+    originalPrice: 236e3,
+    condition: "brand-new-oem",
+    vehicleType: "Universal",
+    compatibleVehicles: [
+      {
+        type: "SUV",
+        make: "Honda",
+        model: "Vezel",
+        yearRange: "2014-2024",
+        chassisCodes: ["RU3", "RV5"]
+      },
+      {
+        type: "Car",
+        make: "Toyota",
+        model: "Prius / Camry",
+        yearRange: "2016-2024",
+        chassisCodes: ["ZVW50", "AXVH70"]
+      },
+      {
+        type: "SUV",
+        make: "Nissan",
+        model: "X-Trail",
+        yearRange: "2015-2023",
+        chassisCodes: ["T32"]
+      }
+    ],
+    chassisCodes: ["RU3", "RV5", "ZVW50", "AXVH70", "T32"],
+    inStock: true,
+    stockQuantity: 16,
+    warranty: "5 Years Manufacturer Warranty / 60,000 km Mileage Warranty",
+    rating: 5,
+    reviewCount: 38,
+    images: [
+      "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=600&fit=crop&auto=format"
+    ],
+    description: "The gold standard for luxury touring comfort and wet road braking performance. EverGrip Technology ensures safety from the first kilometer to the legal tread wear limit.",
+    specifications: {
+      "Size": "215/55 R17 94W",
+      "Speed Rating": "W (Up to 270 km/h)",
+      "Wet Grip Grade": "Grade A (Shortest stopping distance)",
+      "Manufacture Date": "Fresh 2024 Production DOT Batch"
+    },
+    seller: {
+      id: "d2",
+      name: "Millennium Motors Parts Outlet",
+      verified: true,
+      location: "Ja-Ela",
+      phone: "+94 11 345 6789",
+      whatsapp: "+94 77 345 6789",
+      rating: 4.7,
+      storeId: "d2"
+    },
+    badge: "Premium Comfort"
+  }
+];
+
+const mockServices = [
+  {
+    id: "s1",
+    name: "Flash Towing 24/7 Emergency Breakdown Assistance",
+    slug: "flash-towing-247-colombo",
+    type: "towing",
+    typeLabel: "24/7 Emergency Towing",
+    verified: true,
+    rating: 4.9,
+    reviewCount: 215,
+    address: "88 Baseline Road, Colombo 09",
+    city: "Colombo",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 789 2424",
+    emergencyPhone: "+94 77 999 2424",
+    whatsapp: "+94 77 999 2424",
+    openHours: "Open 24 Hours / 7 Days",
+    is24x7: true,
+    lat: 6.927,
+    lng: 79.871,
+    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["Flatbed Towing", "Accident Recovery", "Wheel-Lift Towing", "Jump Start & Battery", "Lockout & Tyre Change"],
+    servicesOffered: [
+      { name: "Hydraulic Flatbed Towing (Zero-Damage)", priceEstimate: "Rs. 7,500 base + Rs. 350/km", duration: "Avg 20 mins arrival" },
+      { name: "Rapid Battery Jump Start & Alternator Test", priceEstimate: "Rs. 3,500 flat", duration: "15 mins arrival" },
+      { name: "Emergency On-Site Tyre Replacement / Inflation", priceEstimate: "Rs. 3,000 flat", duration: "20 mins arrival" },
+      { name: "Highway / Expressway Breakdown Towing", priceEstimate: "Rs. 12,000 base + Rs. 400/km", duration: "Immediate dispatch" }
+    ],
+    description: "Western Province\u2019s fastest 24/7 roadside emergency response fleet with 18 modern hydraulic flatbeds and rapid motor response units. Zero-scratch tow guarantee for luxury cars, hybrids, and electric vehicles.",
+    features: ["24/7 Live Hotline", "GPS Tracking of Tow Truck", "Expressway Authorized Permit", "Direct Insurance Billing (Ceylinco, SLIC, Allianz)"],
+    towingDetails: {
+      flatbed: true,
+      wheelLift: true,
+      heavyDuty: false,
+      baseFare: 7500,
+      perKmFare: 350,
+      avgResponseMins: 20,
+      expresswayPermit: true,
+      hotline: "+94 77 999 2424",
+      serviceAreas: ["Colombo 01-15", "Dehiwala-Mount Lavinia", "Sri Jayawardenepura Kotte", "Gampaha", "Southern Expressway Kadawatha to Dodangoda"]
+    },
+    badge: "Fastest ETA 20 Mins"
+  },
+  {
+    id: "s2",
+    name: "Expressway Highway Rescue 24/7",
+    slug: "expressway-highway-rescue-247",
+    type: "towing",
+    typeLabel: "24/7 Highway Towing",
+    verified: true,
+    rating: 4.8,
+    reviewCount: 148,
+    address: "Kottawa Interchange, High Level Road, Kottawa",
+    city: "Kottawa",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 444 8899",
+    emergencyPhone: "+94 71 888 2424",
+    whatsapp: "+94 71 888 2424",
+    openHours: "Open 24 Hours / 365 Days",
+    is24x7: true,
+    lat: 6.841,
+    lng: 79.967,
+    images: ["https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["Southern Expressway (E01)", "Central Expressway (E04)", "Katunayake Expressway (E03)", "Heavy Duty Towing"],
+    servicesOffered: [
+      { name: "Expressway Breakdown Flatbed Recovery", priceEstimate: "Rs. 9,500 base + Rs. 400/km", duration: "15-25 mins" },
+      { name: "Emergency Fuel Delivery (5L Petrol/Diesel)", priceEstimate: "Rs. 4,500 + fuel cost", duration: "20 mins" },
+      { name: "Heavy Duty SUV / 4WD Winching & Recovery", priceEstimate: "Rs. 15,000 base", duration: "30 mins" }
+    ],
+    description: "Dedicated expressway emergency assistance units stationed permanently at Kottawa, Kadawatha, Mirigama, and Dodangoda interchanges. Full clearance for highway police and RDA protocols.",
+    features: ["Highway Police Approved", "Heavy Duty Winch Trucks", "24/7 Expressway Coverage", "Card & QR Payment"],
+    towingDetails: {
+      flatbed: true,
+      wheelLift: true,
+      heavyDuty: true,
+      baseFare: 9500,
+      perKmFare: 400,
+      avgResponseMins: 18,
+      expresswayPermit: true,
+      hotline: "+94 71 888 2424",
+      serviceAreas: ["E01 Southern Expressway", "E02 Outer Circular", "E03 Airport Expressway", "E04 Central Expressway"]
+    },
+    badge: "Expressway Approved"
+  },
+  {
+    id: "s3",
+    name: "Islandwide QuickRecovery Towing Service",
+    slug: "islandwide-quickrecovery-towing",
+    type: "towing",
+    typeLabel: "24/7 Outstation Towing",
+    verified: true,
+    rating: 4.7,
+    reviewCount: 96,
+    address: "15 William Gopallawa Mawatha, Kandy",
+    city: "Kandy",
+    district: "Kandy",
+    province: "Central",
+    phone: "+94 81 222 9900",
+    emergencyPhone: "+94 76 555 8899",
+    whatsapp: "+94 76 555 8899",
+    openHours: "Open 24 Hours",
+    is24x7: true,
+    lat: 7.285,
+    lng: 80.628,
+    images: ["https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["Hill Country Recovery", "Inter-Province Long Distance Towing", "Accident Haulage"],
+    servicesOffered: [
+      { name: "Long-Distance Vehicle Transport (Inter-city)", priceEstimate: "Rs. 300/km fixed", duration: "Scheduled / Emergency" },
+      { name: "Kandy / Nuwara Eliya Mountain Recovery", priceEstimate: "Rs. 12,500 base", duration: "25 mins" }
+    ],
+    description: "Central Province and islandwide long-distance transport specialists. Equipped for steep inclines, hairpins, and outstation breakdown recovery back to Colombo.",
+    features: ["Outstation Fleet", "Full Transit Cargo Insurance", "Flatbed Trucks"],
+    towingDetails: {
+      flatbed: true,
+      wheelLift: false,
+      heavyDuty: true,
+      baseFare: 8e3,
+      perKmFare: 300,
+      avgResponseMins: 25,
+      expresswayPermit: true,
+      hotline: "+94 76 555 8899",
+      serviceAreas: ["Kandy", "Matale", "Kurunegala", "Nuwara Eliya", "Kegalle"]
+    },
+    badge: "Hill Country Specialist"
+  },
+  {
+    id: "s4",
+    name: "Hybrid Hub Sri Lanka (High Voltage Battery & Inverter Lab)",
+    slug: "hybrid-hub-sri-lanka-colombo",
+    type: "garage",
+    typeLabel: "Specialized Hybrid/EV Workshop",
+    verified: true,
+    rating: 4.9,
+    reviewCount: 312,
+    address: "425 Nawala Road, Rajagiriya",
+    city: "Rajagiriya",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 288 7766",
+    whatsapp: "+94 77 444 3322",
+    openHours: "Mon - Sat: 8:00 AM - 6:00 PM",
+    is24x7: false,
+    lat: 6.898,
+    lng: 79.897,
+    images: ["https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["Hybrid Battery Rebuild & Balancing", "Inverter Diagnostics", "ABS Actuator Repair", "Toyota / Honda / Nissan Hybrid", "EV Diagnostics"],
+    servicesOffered: [
+      { name: "Comprehensive 40-Point Hybrid System & Battery Health Test", priceEstimate: "Rs. 4,500", duration: "45 mins" },
+      { name: "Hybrid Battery Cell Rebalancing & Deep Conditioning", priceEstimate: "Rs. 35,000", duration: "1 day" },
+      { name: "Inverter Coolant Flush & Pump Replacement", priceEstimate: "Rs. 12,000 + parts", duration: "2 hours" },
+      { name: "ABS Brake Actuator Overhaul & Programming", priceEstimate: "Rs. 45,000", duration: "1 day" }
+    ],
+    description: "Sri Lanka\u2019s pioneer specialized hybrid center equipped with factory diagnostic tools (Toyota Techstream, Honda HDS). Certified by hybrid powertrain engineers with over 10,000 successful battery restorations.",
+    features: ["Free Diagnostic Scan with Any Service", "Genuine Panasonic / OEM Cells Only", "6-Month to 2-Year Warranty on Repairs", "Air-Conditioned Customer Lounge with Wi-Fi"],
+    badge: "Top Rated Hybrid Lab"
+  },
+  {
+    id: "s5",
+    name: "German Tech Masters (BMW, Mercedes-Benz, Audi Specialists)",
+    slug: "german-tech-masters-colombo",
+    type: "garage",
+    typeLabel: "European Luxury Workshop",
+    verified: true,
+    rating: 4.8,
+    reviewCount: 184,
+    address: "312 High Level Road, Nugegoda",
+    city: "Nugegoda",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 555 4321",
+    whatsapp: "+94 77 888 1212",
+    openHours: "Mon - Sat: 8:30 AM - 6:30 PM",
+    is24x7: false,
+    lat: 6.872,
+    lng: 79.895,
+    images: ["https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["BMW M Series", "Mercedes-Benz AMG", "Audi S-Line", "ZF Transmission Overhaul", "Air Suspension Calibrations", "ECU Tuning"],
+    servicesOffered: [
+      { name: "Complete European Computer Diagnostics & Fault Coding", priceEstimate: "Rs. 6,500", duration: "1 hour" },
+      { name: "ZF 8-Speed Automatic Transmission Service & Adaptation", priceEstimate: "Rs. 65,000 + fluid", duration: "4 hours" },
+      { name: "Air Suspension Air Strut & Compressor Overhaul", priceEstimate: "Rs. 75,000+", duration: "1 day" }
+    ],
+    description: "Specialized facility exclusively dedicated to German vehicles. Equipped with original BMW ISTA+, Mercedes Xentry, and VAG-COM diagnostics. Certified master technicians with dealership background.",
+    features: ["Original Factory Software", "OEM European Parts in Stock", "Warranty on All Mechanical Work"],
+    badge: "German Auto Certified"
+  },
+  {
+    id: "s6",
+    name: "Colombo Auto Works & Engine Rebuild Lab",
+    slug: "colombo-auto-works",
+    type: "garage",
+    typeLabel: "Complete Auto Repair Workshop",
+    verified: true,
+    rating: 4.7,
+    reviewCount: 165,
+    address: "74 Havelock Road, Colombo 05",
+    city: "Colombo",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 258 9012",
+    whatsapp: "+94 77 333 4455",
+    openHours: "Mon - Sat: 8:00 AM - 6:00 PM",
+    is24x7: false,
+    lat: 6.883,
+    lng: 79.865,
+    images: ["https://images.unsplash.com/photo-1600790142055-619df03207e6?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["Engine Overhaul", "Gearbox Repair", "Brake Lathe Disc Resurfacing", "AC & Climate Control", "Suspension Bushings"],
+    servicesOffered: [
+      { name: "Full Mechanical Inspection & Compression Test", priceEstimate: "Rs. 5,000", duration: "2 hours" },
+      { name: "On-Car Brake Disc Rotor Skimming / Lathe", priceEstimate: "Rs. 4,500 per pair", duration: "1.5 hours" },
+      { name: "Complete Automotive AC Gas Evacuation & Leak Test", priceEstimate: "Rs. 8,500", duration: "2 hours" }
+    ],
+    description: "Trusted multi-brand automotive repair facility with over 25 years of family engineering legacy in Colombo. Hydraulic lifts, disc skimming, cylinder head resurfacing, and complete mechanical overhauls.",
+    features: ["In-house Machine Shop", "All Vehicle Brands", "Detailed Video Progress Updates on WhatsApp"],
+    badge: "25 Years Experience"
+  },
+  {
+    id: "s7",
+    name: "Laugfs Car Care Super Service Station",
+    slug: "laugfs-car-care-super-center-havelock",
+    type: "service-station",
+    typeLabel: "Service Station & Lube Bay",
+    verified: true,
+    rating: 4.8,
+    reviewCount: 290,
+    address: "180 Havelock Road, Colombo 05",
+    city: "Colombo",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 441 5566",
+    whatsapp: "+94 77 666 7788",
+    openHours: "Mon - Sun: 7:00 AM - 8:00 PM",
+    is24x7: false,
+    lat: 6.879,
+    lng: 79.868,
+    images: ["https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["Express Lube Maintenance", "Under-Chassis Wash & Rust Treatment", "Touchless Automatic Wash", "Engine Bay Detailing"],
+    servicesOffered: [
+      { name: "Express Full Periodic Lube Service (Labor + 25-point check)", priceEstimate: "Rs. 4,500 + oil/filter", duration: "45 mins" },
+      { name: "Underbody Wash, Degreasing & Anti-Rust Graphite Spray", priceEstimate: "Rs. 5,500", duration: "1 hour" },
+      { name: "Deluxe Body Wash, Vacuum & Interior Dashboard Conditioning", priceEstimate: "Rs. 3,500", duration: "40 mins" }
+    ],
+    description: "State-of-the-art service station equipped with automated underbody spray bays, quick lube pits, and premium motor oils (Mobil 1, Castrol, Valvoline). Quick turnaround with comfortable air-conditioned waiting caf\xE9.",
+    features: ["Coffee Lounge & Free High-Speed Wi-Fi", "Express 45-Min Lube Service", "Genuine Oil Guarantee"],
+    badge: "Express Service Bay"
+  },
+  {
+    id: "s8",
+    name: "Auto Miraj Grand Express & Ceramic Detailing Center",
+    slug: "auto-miraj-grand-express-rajagiriya",
+    type: "service-station",
+    typeLabel: "Service Station & Detailing Studio",
+    verified: true,
+    rating: 4.9,
+    reviewCount: 420,
+    address: "55 Kotte Road, Rajagiriya",
+    city: "Rajagiriya",
+    district: "Colombo",
+    province: "Western",
+    phone: "+94 11 777 2200",
+    whatsapp: "+94 77 222 1100",
+    openHours: "Mon - Sun: 7:30 AM - 7:30 PM",
+    is24x7: false,
+    lat: 6.902,
+    lng: 79.892,
+    images: ["https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&h=500&fit=crop&auto=format"],
+    specializations: ["9H Ceramic Coating", "Interior Steam Sterilization", "Cut & Polish", "Windshield Water Repellent", "Leather Rejuvenation"],
+    servicesOffered: [
+      { name: "3-Stage Paint Correction & High-Gloss Machine Polish", priceEstimate: "Rs. 18,500", duration: "1 day" },
+      { name: "Permanent 9H Nano Ceramic Coating (3-Year Warranty)", priceEstimate: "Rs. 65,000", duration: "2 days" },
+      { name: "Deep Interior Steam Clean, Carpet Extraction & AC Odor Neutralizer", priceEstimate: "Rs. 14,000", duration: "5 hours" }
+    ],
+    description: "Sri Lanka\u2019s leading auto care and detailing chain. Dust-free temperature controlled ceramic coating booth, computerized paint thickness meters, and certified Rupes detailing master technicians.",
+    features: ["Dust-Free Detailing Studio", "3-Year Warranty Card on Coatings", "Card / Koko 3-Month Installments"],
+    badge: "9H Ceramic Certified"
+  }
+];
+
+const _dqKO90 = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx || {};
   const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
   const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
@@ -3114,26 +4567,32 @@ const _UWxhfu = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
-const _lazy_xwZpc6 = () => Promise.resolve().then(function () { return _slug__get$1; });
-const _lazy_ZcKq7V = () => Promise.resolve().then(function () { return index_get$7; });
-const _lazy__AsGtW = () => Promise.resolve().then(function () { return _id__get$1; });
-const _lazy_Vz2WXJ = () => Promise.resolve().then(function () { return index_get$5; });
-const _lazy_IZMHCw = () => Promise.resolve().then(function () { return index_get$3; });
-const _lazy_qlhOKC = () => Promise.resolve().then(function () { return index_get$1; });
-const _lazy_v6Qyig = () => Promise.resolve().then(function () { return renderer; });
+const _lazy_LPYa6_ = () => Promise.resolve().then(function () { return _slug__get$1; });
+const _lazy_QfeXB6 = () => Promise.resolve().then(function () { return index_get$b; });
+const _lazy_RervSR = () => Promise.resolve().then(function () { return _id__get$3; });
+const _lazy_ZYzd5T = () => Promise.resolve().then(function () { return index_get$9; });
+const _lazy_Gc0o5O = () => Promise.resolve().then(function () { return index_get$7; });
+const _lazy_j37wng = () => Promise.resolve().then(function () { return _id__get$1; });
+const _lazy_yfthFw = () => Promise.resolve().then(function () { return index_get$5; });
+const _lazy_vaMH1U = () => Promise.resolve().then(function () { return index_get$3; });
+const _lazy_m0VsoR = () => Promise.resolve().then(function () { return index_get$1; });
+const _lazy_4V0bbX = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
-  { route: '', handler: _ymzPln, lazy: false, middleware: true, method: undefined },
-  { route: '/api/cars/:slug', handler: _lazy_xwZpc6, lazy: true, middleware: false, method: "get" },
-  { route: '/api/cars', handler: _lazy_ZcKq7V, lazy: true, middleware: false, method: "get" },
-  { route: '/api/dealers/:id', handler: _lazy__AsGtW, lazy: true, middleware: false, method: "get" },
-  { route: '/api/dealers', handler: _lazy_Vz2WXJ, lazy: true, middleware: false, method: "get" },
-  { route: '/api/news', handler: _lazy_IZMHCw, lazy: true, middleware: false, method: "get" },
-  { route: '/api/reviews', handler: _lazy_qlhOKC, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_v6Qyig, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _rXqLSG, lazy: false, middleware: true, method: undefined },
+  { route: '/api/cars/:slug', handler: _lazy_LPYa6_, lazy: true, middleware: false, method: "get" },
+  { route: '/api/cars', handler: _lazy_QfeXB6, lazy: true, middleware: false, method: "get" },
+  { route: '/api/dealers/:id', handler: _lazy_RervSR, lazy: true, middleware: false, method: "get" },
+  { route: '/api/dealers', handler: _lazy_ZYzd5T, lazy: true, middleware: false, method: "get" },
+  { route: '/api/news', handler: _lazy_Gc0o5O, lazy: true, middleware: false, method: "get" },
+  { route: '/api/parts/:id', handler: _lazy_j37wng, lazy: true, middleware: false, method: "get" },
+  { route: '/api/parts', handler: _lazy_yfthFw, lazy: true, middleware: false, method: "get" },
+  { route: '/api/reviews', handler: _lazy_vaMH1U, lazy: true, middleware: false, method: "get" },
+  { route: '/api/services', handler: _lazy_m0VsoR, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_4V0bbX, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _UWxhfu, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_v6Qyig, lazy: true, middleware: false, method: undefined }
+  { route: '/_ipx/**', handler: _dqKO90, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_4V0bbX, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -3420,7 +4879,7 @@ const _slug__get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProper
   default: _slug__get
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const index_get$6 = defineEventHandler((event) => {
+const index_get$a = defineEventHandler((event) => {
   const query = getQuery$1(event);
   let filtered = [...mockCars];
   if (query.condition && query.condition !== "all") {
@@ -3439,6 +4898,9 @@ const index_get$6 = defineEventHandler((event) => {
   }
   if (query.priceMin) filtered = filtered.filter((c) => c.price >= Number(query.priceMin));
   if (query.priceMax) filtered = filtered.filter((c) => c.price <= Number(query.priceMax));
+  if (query.dealerId) {
+    filtered = filtered.filter((c) => c.dealerId === String(query.dealerId));
+  }
   if (query.featured === "true") {
     filtered = filtered.filter((c) => c.featured);
   }
@@ -3462,249 +4924,34 @@ const index_get$6 = defineEventHandler((event) => {
   return { cars, total, page, totalPages };
 });
 
-const index_get$7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const index_get$b = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: index_get$6
+  default: index_get$a
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const mockDealers$1 = [
-  {
-    id: "d1",
-    name: "Prima Auto Lanka",
-    logo: "",
-    province: "Western",
-    district: "Colombo",
-    address: "142 Galle Road, Colombo 04",
-    phone: "+94 11 234 5678",
-    whatsapp: "+94 77 234 5678",
-    rating: 4.8,
-    reviewCount: 124,
-    listingCount: 89,
-    specialization: ["New Cars", "Hybrid"],
-    verified: true,
-    lat: 6.887,
-    lng: 79.851,
-    description: "Authorized Toyota dealer with over 20 years of experience.",
-    established: 2003
-  },
-  {
-    id: "d2",
-    name: "Millennium Motors",
-    logo: "",
-    province: "Western",
-    district: "Gampaha",
-    address: "28 Negombo Road, Ja-Ela",
-    phone: "+94 11 345 6789",
-    whatsapp: "+94 77 345 6789",
-    rating: 4.6,
-    reviewCount: 87,
-    listingCount: 145,
-    specialization: ["Used Cars", "SUV"],
-    verified: true,
-    lat: 7.073,
-    lng: 79.893,
-    established: 2008
-  },
-  {
-    id: "d3",
-    name: "Luxury Auto Gallery",
-    logo: "",
-    province: "Western",
-    district: "Colombo",
-    address: "56 Duplication Road, Colombo 03",
-    phone: "+94 11 456 7890",
-    whatsapp: "+94 77 456 7890",
-    rating: 4.9,
-    reviewCount: 62,
-    listingCount: 34,
-    specialization: ["Luxury", "BMW", "Mercedes"],
-    verified: true,
-    lat: 6.895,
-    lng: 79.855,
-    established: 2015
-  },
-  {
-    id: "d4",
-    name: "Island Wide Auto",
-    logo: "",
-    province: "Central",
-    district: "Kandy",
-    address: "78 Peradeniya Road, Kandy",
-    phone: "+94 81 234 5678",
-    whatsapp: "+94 77 567 8901",
-    rating: 4.5,
-    reviewCount: 98,
-    listingCount: 112,
-    specialization: ["Used Cars", "New Cars"],
-    verified: true,
-    lat: 7.289,
-    lng: 80.632,
-    established: 2005
-  },
-  {
-    id: "d5",
-    name: "Southern Motors",
-    logo: "",
-    province: "Southern",
-    district: "Galle",
-    address: "34 Matara Road, Galle",
-    phone: "+94 91 234 5678",
-    whatsapp: "+94 77 678 9012",
-    rating: 4.3,
-    reviewCount: 45,
-    listingCount: 67,
-    specialization: ["Used Cars", "Pickup"],
-    verified: false,
-    lat: 6.055,
-    lng: 80.218,
-    established: 2011
-  },
-  {
-    id: "d6",
-    name: "EV Lanka Motors",
-    logo: "",
-    province: "Western",
-    district: "Colombo",
-    address: "22 Baseline Road, Colombo 09",
-    phone: "+94 11 567 8901",
-    whatsapp: "+94 77 789 0123",
-    rating: 4.7,
-    reviewCount: 38,
-    listingCount: 28,
-    specialization: ["Electric", "Hybrid", "EV"],
-    verified: true,
-    lat: 6.919,
-    lng: 79.863,
-    established: 2020
-  }
-];
-const _id__get = defineEventHandler((event) => {
+const _id__get$2 = defineEventHandler((event) => {
   const { id } = event.context.params || {};
-  const dealer = mockDealers$1.find((d) => d.id === id);
+  const dealer = mockDealers.find((d) => d.id === id);
   if (!dealer) {
     setResponseStatus(event, 404);
     return { error: "Dealer not found" };
   }
-  return { dealer };
+  const dealerCars = mockCars.filter((c) => c.dealerId === id);
+  return {
+    dealer: {
+      ...dealer,
+      listingCount: dealerCars.length > 0 ? dealerCars.length : dealer.listingCount
+    },
+    cars: dealerCars
+  };
 });
 
-const _id__get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _id__get$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: _id__get
+  default: _id__get$2
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const mockDealers = [
-  {
-    id: "d1",
-    name: "Prima Auto Lanka",
-    logo: "",
-    province: "Western",
-    district: "Colombo",
-    address: "142 Galle Road, Colombo 04",
-    phone: "+94 11 234 5678",
-    whatsapp: "+94 77 234 5678",
-    rating: 4.8,
-    reviewCount: 124,
-    listingCount: 89,
-    specialization: ["New Cars", "Hybrid"],
-    verified: true,
-    lat: 6.887,
-    lng: 79.851,
-    description: "Authorized Toyota dealer with over 20 years of experience.",
-    established: 2003
-  },
-  {
-    id: "d2",
-    name: "Millennium Motors",
-    logo: "",
-    province: "Western",
-    district: "Gampaha",
-    address: "28 Negombo Road, Ja-Ela",
-    phone: "+94 11 345 6789",
-    whatsapp: "+94 77 345 6789",
-    rating: 4.6,
-    reviewCount: 87,
-    listingCount: 145,
-    specialization: ["Used Cars", "SUV"],
-    verified: true,
-    lat: 7.073,
-    lng: 79.893,
-    established: 2008
-  },
-  {
-    id: "d3",
-    name: "Luxury Auto Gallery",
-    logo: "",
-    province: "Western",
-    district: "Colombo",
-    address: "56 Duplication Road, Colombo 03",
-    phone: "+94 11 456 7890",
-    whatsapp: "+94 77 456 7890",
-    rating: 4.9,
-    reviewCount: 62,
-    listingCount: 34,
-    specialization: ["Luxury", "BMW", "Mercedes"],
-    verified: true,
-    lat: 6.895,
-    lng: 79.855,
-    established: 2015
-  },
-  {
-    id: "d4",
-    name: "Island Wide Auto",
-    logo: "",
-    province: "Central",
-    district: "Kandy",
-    address: "78 Peradeniya Road, Kandy",
-    phone: "+94 81 234 5678",
-    whatsapp: "+94 77 567 8901",
-    rating: 4.5,
-    reviewCount: 98,
-    listingCount: 112,
-    specialization: ["Used Cars", "New Cars"],
-    verified: true,
-    lat: 7.289,
-    lng: 80.632,
-    established: 2005
-  },
-  {
-    id: "d5",
-    name: "Southern Motors",
-    logo: "",
-    province: "Southern",
-    district: "Galle",
-    address: "34 Matara Road, Galle",
-    phone: "+94 91 234 5678",
-    whatsapp: "+94 77 678 9012",
-    rating: 4.3,
-    reviewCount: 45,
-    listingCount: 67,
-    specialization: ["Used Cars", "Pickup"],
-    verified: false,
-    lat: 6.055,
-    lng: 80.218,
-    established: 2011
-  },
-  {
-    id: "d6",
-    name: "EV Lanka Motors",
-    logo: "",
-    province: "Western",
-    district: "Colombo",
-    address: "22 Baseline Road, Colombo 09",
-    phone: "+94 11 567 8901",
-    whatsapp: "+94 77 789 0123",
-    rating: 4.7,
-    reviewCount: 38,
-    listingCount: 28,
-    specialization: ["Electric", "Hybrid", "EV"],
-    verified: true,
-    lat: 6.919,
-    lng: 79.863,
-    established: 2020
-  }
-];
-const index_get$4 = defineEventHandler((event) => {
+const index_get$8 = defineEventHandler((event) => {
   const query = getQuery$1(event);
   let filtered = [...mockDealers];
   if (query.province) {
@@ -3718,9 +4965,9 @@ const index_get$4 = defineEventHandler((event) => {
   return { dealers: filtered, total: filtered.length };
 });
 
-const index_get$5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const index_get$9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: index_get$4
+  default: index_get$8
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const mockArticles = [
@@ -3803,7 +5050,7 @@ const mockArticles = [
     featured: false
   }
 ];
-const index_get$2 = defineEventHandler((event) => {
+const index_get$6 = defineEventHandler((event) => {
   const query = getQuery$1(event);
   let filtered = [...mockArticles];
   if (query.category) {
@@ -3816,9 +5063,82 @@ const index_get$2 = defineEventHandler((event) => {
   return { articles: filtered.slice(0, limit), total: filtered.length };
 });
 
-const index_get$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const index_get$7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: index_get$2
+  default: index_get$6
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const _id__get = defineEventHandler((event) => {
+  const { id } = event.context.params || {};
+  const part = mockParts.find((p) => p.id === id || p.slug === id);
+  if (!part) {
+    setResponseStatus(event, 404);
+    return { error: "Automobile product not found" };
+  }
+  return { part };
+});
+
+const _id__get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: _id__get
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const index_get$4 = defineEventHandler((event) => {
+  const query = getQuery$1(event);
+  let filtered = [...mockParts];
+  if (query.vehicleType && query.vehicleType !== "all") {
+    const vType = String(query.vehicleType).toLowerCase();
+    filtered = filtered.filter(
+      (p) => p.vehicleType.toLowerCase() === vType || p.vehicleType.toLowerCase() === "universal" || p.compatibleVehicles.some((cv) => cv.type.toLowerCase() === vType || cv.type.toLowerCase() === "universal")
+    );
+  }
+  if (query.make) {
+    const makeQuery = String(query.make).toLowerCase();
+    filtered = filtered.filter(
+      (p) => p.vehicleType.toLowerCase() === "universal" || p.compatibleVehicles.some((cv) => cv.make.toLowerCase().includes(makeQuery) || cv.make.toLowerCase() === "all makes")
+    );
+  }
+  if (query.model) {
+    const modelQuery = String(query.model).toLowerCase();
+    filtered = filtered.filter(
+      (p) => p.vehicleType.toLowerCase() === "universal" || p.compatibleVehicles.some((cv) => cv.model.toLowerCase().includes(modelQuery) || cv.model.toLowerCase().includes("universal"))
+    );
+  }
+  if (query.chassis) {
+    const chassisQuery = String(query.chassis).trim().toUpperCase();
+    filtered = filtered.filter(
+      (p) => p.chassisCodes.includes("ALL") || p.chassisCodes.some((c) => c.toUpperCase().includes(chassisQuery) || chassisQuery.includes(c.toUpperCase()))
+    );
+  }
+  if (query.category && query.category !== "all") {
+    filtered = filtered.filter((p) => p.category === query.category);
+  }
+  if (query.condition && query.condition !== "all") {
+    filtered = filtered.filter((p) => p.condition === query.condition);
+  }
+  if (query.brand) {
+    const brandQuery = String(query.brand).toLowerCase();
+    filtered = filtered.filter((p) => p.brand.toLowerCase().includes(brandQuery));
+  }
+  if (query.priceMin) filtered = filtered.filter((p) => p.price >= Number(query.priceMin));
+  if (query.priceMax) filtered = filtered.filter((p) => p.price <= Number(query.priceMax));
+  if (query.q) {
+    const q = String(query.q).toLowerCase();
+    filtered = filtered.filter(
+      (p) => p.title.toLowerCase().includes(q) || p.partNumber.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q) || p.oemNumber && p.oemNumber.toLowerCase().includes(q) || p.chassisCodes.some((c) => c.toLowerCase().includes(q))
+    );
+  }
+  const sortBy = query.sortBy;
+  if (sortBy === "price_asc") filtered.sort((a, b) => a.price - b.price);
+  else if (sortBy === "price_desc") filtered.sort((a, b) => b.price - a.price);
+  else if (sortBy === "rating") filtered.sort((a, b) => b.rating - a.rating);
+  const total = filtered.length;
+  return { parts: filtered, total };
+});
+
+const index_get$5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: index_get$4
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const mockReviews = [
@@ -3895,11 +5215,44 @@ const mockReviews = [
     readTime: 9
   }
 ];
-const index_get = defineEventHandler((event) => {
+const index_get$2 = defineEventHandler((event) => {
   const query = getQuery$1(event);
   let filtered = [...mockReviews];
   const limit = Number(query.limit) || 10;
   return { reviews: filtered.slice(0, limit), total: filtered.length };
+});
+
+const index_get$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: index_get$2
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const index_get = defineEventHandler((event) => {
+  const query = getQuery$1(event);
+  let filtered = [...mockServices];
+  if (query.type && query.type !== "all") {
+    filtered = filtered.filter((s) => s.type === query.type);
+  }
+  if (query.is24x7 === "true") {
+    filtered = filtered.filter((s) => s.is24x7);
+  }
+  if (query.district) {
+    const distQuery = String(query.district).toLowerCase();
+    filtered = filtered.filter((s) => s.district.toLowerCase() === distQuery);
+  }
+  if (query.specialty) {
+    const specQuery = String(query.specialty).toLowerCase();
+    filtered = filtered.filter(
+      (s) => s.specializations.some((sp) => sp.toLowerCase().includes(specQuery))
+    );
+  }
+  if (query.q) {
+    const q = String(query.q).toLowerCase();
+    filtered = filtered.filter(
+      (s) => s.name.toLowerCase().includes(q) || s.city.toLowerCase().includes(q) || s.district.toLowerCase().includes(q) || s.specializations.some((sp) => sp.toLowerCase().includes(q)) || s.servicesOffered.some((so) => so.name.toLowerCase().includes(q))
+    );
+  }
+  return { services: filtered, total: filtered.length };
 });
 
 const index_get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

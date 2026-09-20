@@ -60,6 +60,7 @@ const toggleCompare = (e: Event) => {
         :alt="`${car.year} ${car.make} ${car.model}`"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         loading="lazy"
+        @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=225&fit=crop&auto=format'"
       />
       <!-- Condition badge -->
       <span

@@ -82,6 +82,9 @@ declare global {
   const isWebResponse: typeof import('../../node_modules/h3').isWebResponse
   const lazyEventHandler: typeof import('../../node_modules/h3').lazyEventHandler
   const mockCars: typeof import('../../server/utils/mockCars').mockCars
+  const mockDealers: typeof import('../../server/utils/mockDealers').mockDealers
+  const mockParts: typeof import('../../server/utils/mockParts').mockParts
+  const mockServices: typeof import('../../server/utils/mockServices').mockServices
   const nitroPlugin: typeof import('../../node_modules/nitropack/dist/runtime/internal/plugin').nitroPlugin
   const parseCookies: typeof import('../../node_modules/h3').parseCookies
   const promisifyNodeListener: typeof import('../../node_modules/h3').promisifyNodeListener
@@ -147,7 +150,10 @@ export { getRouteRules } from 'nitropack/runtime/internal/route-rules';
 export { useEvent } from 'nitropack/runtime/internal/context';
 export { defineTask, runTask } from 'nitropack/runtime/internal/task';
 export { defineNitroErrorHandler } from 'nitropack/runtime/internal/error/utils';
-export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from 'E:/DTL/Automobile/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths';
-export { defineAppConfig } from 'E:/DTL/Automobile/node_modules/@nuxt/nitro-server/dist/runtime/utils/config';
-export { useImage } from 'E:/DTL/Automobile/node_modules/@nuxt/image/dist/runtime/server/utils/image';
-export { mockCars } from 'E:/DTL/Automobile/server/utils/mockCars';
+export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '/Users/indipaayomal/dev/Automobile/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths';
+export { defineAppConfig } from '/Users/indipaayomal/dev/Automobile/node_modules/@nuxt/nitro-server/dist/runtime/utils/config';
+export { useImage } from '/Users/indipaayomal/dev/Automobile/node_modules/@nuxt/image/dist/runtime/server/utils/image';
+export { mockCars } from '/Users/indipaayomal/dev/Automobile/server/utils/mockCars';
+export { mockDealers } from '/Users/indipaayomal/dev/Automobile/server/utils/mockDealers';
+export { mockParts } from '/Users/indipaayomal/dev/Automobile/server/utils/mockParts';
+export { mockServices } from '/Users/indipaayomal/dev/Automobile/server/utils/mockServices';

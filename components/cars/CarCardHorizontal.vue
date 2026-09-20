@@ -31,6 +31,7 @@ const conditionLabel: Record<string, string> = {
         :alt="`${car.year} ${car.make} ${car.model}`"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         loading="lazy"
+        @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=256&h=160&fit=crop&auto=format'"
       />
       <span :class="['absolute top-3 left-3 px-2 py-0.5 text-xs font-semibold', conditionBadge[car.condition]]">
         {{ conditionLabel[car.condition] }}

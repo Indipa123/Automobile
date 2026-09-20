@@ -32,7 +32,12 @@ const awards = [
           class="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/40 transition-all hover:-translate-y-1 hover:shadow-glow-accent"
         >
           <div class="relative aspect-video overflow-hidden">
-            <img :src="award.image" :alt="award.winner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img
+              :src="award.image"
+              :alt="award.winner"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop&auto=format'"
+            />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div class="absolute top-3 left-3 text-3xl">{{ award.badge }}</div>
             <div class="absolute bottom-3 right-3 w-12 h-12 rounded-full bg-accent flex items-center justify-center">

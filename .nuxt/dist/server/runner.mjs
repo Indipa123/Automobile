@@ -1,1 +1,1 @@
-export { default } from "file:///E:/DTL/Automobile/node_modules/@nuxt/vite-builder/dist/vite-node-runner.mjs"
+export { default } from "file:///Users/indipaayomal/dev/Automobile/node_modules/@nuxt/vite-builder/dist/vite-node-runner.mjs"

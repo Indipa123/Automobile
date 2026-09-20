@@ -40,6 +40,7 @@ export interface Car {
   images: string[]
   location: CarLocation
   dealer?: Dealer
+  dealerId?: string
   sellerType: 'dealer' | 'private'
   dealRating: DealRating
   marketValue: number
@@ -62,6 +63,7 @@ export interface CarFilters {
   condition?: CarCondition | 'all'
   make?: string
   model?: string
+  dealerId?: string
   yearMin?: number
   yearMax?: number
   priceMin?: number

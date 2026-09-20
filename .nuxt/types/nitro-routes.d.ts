@@ -18,8 +18,17 @@ declare module "nitropack/types" {
     '/api/news': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/news/index.get').default>>>>
     }
+    '/api/parts/:id': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/parts/[id].get').default>>>>
+    }
+    '/api/parts': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/parts/index.get').default>>>>
+    }
     '/api/reviews': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/reviews/index.get').default>>>>
+    }
+    '/api/services': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/services/index.get').default>>>>
     }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/nitro-server/dist/runtime/handlers/renderer').default>>>>

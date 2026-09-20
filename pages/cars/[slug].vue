@@ -238,6 +238,23 @@ const mockRatingBreakdown = {
               </div>
             </div>
 
+            <!-- Dealer Store Link Card -->
+            <div v-if="car.dealerId" class="bg-primary/5 border border-primary/20 rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-primary">Verified Showroom</span>
+                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Official Store</span>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-gray-900 text-base">In Stock at Dealer Showroom</h4>
+                <p class="text-muted text-xs mt-1">This vehicle is inspected and displayed at an authorized dealership with warranty options.</p>
+              </div>
+              <NuxtLink :to="`/dealers/${car.dealerId}`" class="block">
+                <AppButton variant="primary" size="sm" full-width class="font-semibold">
+                  Visit Dealer Store & See All Stock →
+                </AppButton>
+              </NuxtLink>
+            </div>
+
             <!-- Safety rating -->
             <div class="bg-surface border border-border rounded-2xl p-5">
               <h3 class="font-semibold text-gray-900 text-sm mb-3">Safety Rating</h3>

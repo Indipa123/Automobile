@@ -2,32 +2,33 @@
 const currentYear = new Date().getFullYear()
 
 const footerLinks = {
-  company: [
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Press', href: '/press' },
-  ],
-  buying: [
-    { label: 'New Cars', href: '/cars/new' },
-    { label: 'Used Cars', href: '/cars/used' },
+  vehicles: [
+    { label: 'New Vehicles', href: '/cars/new' },
+    { label: 'Verified Pre-Owned', href: '/cars/used' },
     { label: 'Electric & Hybrid', href: '/cars/electric' },
-    { label: 'Dealer Directory', href: '/dealers' },
-    { label: 'Car Comparison', href: '/compare' },
+    { label: 'Dealer Showroom Stores', href: '/dealers' },
+    { label: 'Post Vehicle Ad Free', href: '/sell/post-ad' },
   ],
-  tools: [
-    { label: 'Loan Calculator', href: '/finance/loan-calculator' },
-    { label: 'Insurance Quote', href: '/finance/insurance' },
-    { label: 'EV Guide', href: '/ev-guide' },
-    { label: 'Safety Ratings', href: '/safety' },
-    { label: 'Awards 2024', href: '/awards' },
+  parts: [
+    { label: 'All Auto Spare Parts', href: '/parts' },
+    { label: 'Chassis / VIN Lookup', href: '/parts?chassis=ZVW50' },
+    { label: 'Engine Oils & Lubricants', href: '/parts?category=lubricants-fluids' },
+    { label: 'Brakes & Suspension', href: '/parts?category=suspension-brakes' },
+    { label: 'Hybrid Batteries & Cells', href: '/parts?category=batteries' },
   ],
-  resources: [
-    { label: 'Expert Reviews', href: '/reviews' },
-    { label: 'News & Articles', href: '/news' },
-    { label: 'Research Hub', href: '/research' },
-    { label: 'Buying Guides', href: '/news?category=guide' },
-    { label: 'Price Trends', href: '/research' },
+  services: [
+    { label: 'Services Directory', href: '/services' },
+    { label: '24/7 Emergency Towing', href: '/services/towing' },
+    { label: 'Garages & Battery Labs', href: '/services/garages' },
+    { label: 'Lube Bays & Detailing', href: '/services/service-stations' },
+    { label: 'Towing Fare Estimator', href: '/services/towing' },
+  ],
+  finance: [
+    { label: 'Loan EMI Calculator', href: '/finance/loan-calculator' },
+    { label: 'Auto Insurance Quote', href: '/finance/insurance' },
+    { label: 'Bank Leasing Rates', href: '/finance' },
+    { label: 'EV Buying Guide', href: '/ev-guide' },
+    { label: 'Expert Car Reviews', href: '/reviews' },
   ],
 }
 </script>

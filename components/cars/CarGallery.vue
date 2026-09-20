@@ -37,6 +37,7 @@ onMounted(() => {
         :src="images[activeIndex] || 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=450&fit=crop&auto=format'"
         :alt="`${alt} - Image ${activeIndex + 1}`"
         class="w-full h-full object-cover"
+        @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=450&fit=crop&auto=format'"
       />
       <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/60 backdrop-blur-sm rounded-lg text-white text-xs">
         {{ activeIndex + 1 }} / {{ images.length }}
@@ -68,7 +69,12 @@ onMounted(() => {
         :class="i === activeIndex ? 'border-primary' : 'border-border hover:border-primary/50'"
         @click="activeIndex = i"
       >
-        <img :src="img" :alt="`Thumbnail ${i + 1}`" class="w-full h-full object-cover" />
+        <img
+          :src="img"
+          :alt="`Thumbnail ${i + 1}`"
+          class="w-full h-full object-cover"
+          @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=160&h=100&fit=crop&auto=format'"
+        />
       </button>
     </div>
   </div>
@@ -87,6 +93,7 @@ onMounted(() => {
           :src="images[activeIndex]"
           :alt="`${alt} fullscreen`"
           class="max-w-full max-h-full object-contain rounded-xl"
+          @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=700&fit=crop&auto=format'"
         />
         <button v-if="images.length > 1" class="absolute right-4 text-white text-4xl px-4 hover:text-gray-300" @click="next">›</button>
         <div class="absolute bottom-4 text-white text-sm">{{ activeIndex + 1 }} / {{ images.length }}</div>

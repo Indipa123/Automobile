@@ -31,6 +31,11 @@ export default defineEventHandler((event) => {
   if (query.priceMin) filtered = filtered.filter(c => c.price >= Number(query.priceMin))
   if (query.priceMax) filtered = filtered.filter(c => c.price <= Number(query.priceMax))
 
+  // Filter by dealerId
+  if (query.dealerId) {
+    filtered = filtered.filter(c => c.dealerId === String(query.dealerId))
+  }
+
   // Featured only
   if (query.featured === 'true') {
     filtered = filtered.filter(c => c.featured)
