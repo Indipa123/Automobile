@@ -119,9 +119,9 @@ const stats = [
 </script>
 
 <template>
-  <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-gray-950 text-white">
+  <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-gray-950 text-white w-full max-w-full">
     <!-- Animated Luxury Ambient Lighting Background -->
-    <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
       <div class="absolute -top-48 -left-48 w-96 h-96 bg-primary/25 rounded-full blur-3xl animate-pulse" />
       <div class="absolute top-1/3 -right-48 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl animate-pulse" style="animation-duration: 4s;" />
       <div class="absolute -bottom-48 left-1/3 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl animate-pulse" style="animation-duration: 6s;" />
@@ -132,34 +132,33 @@ const stats = [
       />
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full py-10 sm:py-16 md:py-20 lg:py-24">
-      <div class="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0 max-w-full py-8 sm:py-16 md:py-20 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full min-w-0 max-w-full">
         <!-- Left Side: Headline & 5-in-1 Universal Search (7 cols) -->
-        <div class="lg:col-span-7">
+        <div class="w-full min-w-0 max-w-full lg:col-span-7">
           <!-- Animated Status Pill -->
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[11px] sm:text-xs font-semibold text-white/90 backdrop-blur-md mb-4 sm:mb-6 shadow-sm">
+          <div class="inline-flex max-w-full items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[11px] sm:text-xs font-semibold text-white/90 backdrop-blur-md mb-4 sm:mb-6 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-primary animate-ping shrink-0" />
             <span class="truncate">Sri Lanka's 360° All-in-One Automobile Ecosystem</span>
           </div>
 
           <!-- Main Headline -->
-          <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1] mb-3 sm:mb-4">
+          <h1 class="font-display font-black text-2xl xs:text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] mb-3 sm:mb-4 break-words">
             Everything
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-red-500 to-amber-400">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-red-500 to-amber-400 inline-block">
               Automobile
             </span>
-            <br />
-            In One Platform.
+            <span class="block text-white">In One Platform.</span>
           </h1>
 
-          <p class="text-white/70 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-xl leading-relaxed">
+          <p class="text-white/70 text-xs sm:text-base md:text-lg mb-5 sm:mb-8 max-w-xl leading-relaxed">
             Buy & sell vehicles, visit verified dealer virtual stores, find spare parts filtered by your exact <strong class="text-white">Chassis Number</strong>, book certified garages, and request <strong class="text-amber-300">24/7 emergency roadside towing</strong>.
           </p>
 
           <!-- Universal 5-in-1 Search Card -->
-          <div class="bg-gray-900/90 border border-white/15 rounded-3xl p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+          <div class="bg-gray-900/90 border border-white/15 rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-2xl backdrop-blur-xl w-full min-w-0 max-w-full overflow-hidden">
             <!-- Tabs Header with smooth momentum touch scrolling -->
-            <div class="flex items-center gap-1.5 overflow-x-auto pb-3 mb-4 sm:mb-5 border-b border-white/10 no-scrollbar">
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-3 mb-4 sm:mb-5 border-b border-white/10 no-scrollbar touch-pan-x w-full max-w-full">
               <button
                 v-for="t in [
                   { id: 'vehicles', label: '🚗 Buy Vehicles' },
@@ -170,7 +169,7 @@ const stats = [
                 ]"
                 :key="t.id"
                 :class="[
-                  'px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 shrink-0 min-h-[40px]',
+                  'px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 shrink-0 min-h-[38px] sm:min-h-[40px]',
                   activeTab === t.id
                     ? 'bg-primary text-white shadow-glow-red'
                     : 'text-white/60 hover:text-white hover:bg-white/5'
@@ -182,9 +181,9 @@ const stats = [
             </div>
 
             <!-- TAB 1: VEHICLES -->
-            <div v-if="activeTab === 'vehicles'" class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div>
+            <div v-if="activeTab === 'vehicles'" class="space-y-3.5 sm:space-y-4 w-full min-w-0">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-white/70 mb-1">Make / Brand</label>
                   <select
                     v-model="selectedMake"
@@ -195,7 +194,7 @@ const stats = [
                   </select>
                 </div>
 
-                <div>
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-white/70 mb-1">Body Type</label>
                   <select
                     v-model="selectedBody"
@@ -206,7 +205,7 @@ const stats = [
                   </select>
                 </div>
 
-                <div>
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-white/70 mb-1">Condition</label>
                   <div class="grid grid-cols-3 gap-1">
                     <button
@@ -214,7 +213,7 @@ const stats = [
                       :key="c"
                       type="button"
                       :class="[
-                        'py-2 text-xs rounded-xl font-semibold capitalize border transition-all',
+                        'py-2 text-xs rounded-xl font-semibold capitalize border transition-all text-center',
                         selectedCondition === c
                           ? 'bg-primary border-primary text-white'
                           : 'bg-gray-950 border-white/15 text-white/60 hover:text-white'
@@ -229,24 +228,24 @@ const stats = [
 
               <button
                 @click="handleVehicleSearch"
-                class="w-full py-3.5 bg-primary hover:bg-primary-dark text-white font-extrabold rounded-2xl transition-all shadow-glow-red text-sm flex items-center justify-center gap-2"
+                class="w-full py-3 sm:py-3.5 bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl sm:rounded-2xl transition-all shadow-glow-red text-xs sm:text-sm flex items-center justify-center gap-2"
               >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-                Search 45,000+ Vehicles
+                <span>Search 45,000+ Vehicles</span>
               </button>
             </div>
 
             <!-- TAB 2: PARTS BY CHASSIS NUMBER -->
-            <div v-else-if="activeTab === 'parts'" class="space-y-4">
-              <div class="p-3 bg-amber-400/10 border border-amber-400/30 rounded-2xl text-xs text-amber-200 flex items-center gap-2">
-                <span class="text-base">⚙️</span>
-                <span>Type your chassis number to guarantee 100% replacement part fitment</span>
+            <div v-else-if="activeTab === 'parts'" class="space-y-3.5 sm:space-y-4 w-full min-w-0">
+              <div class="p-3 bg-amber-400/10 border border-amber-400/30 rounded-xl sm:rounded-2xl text-xs text-amber-200 flex items-center gap-2">
+                <span class="text-base shrink-0">⚙️</span>
+                <span class="leading-tight">Type your chassis number to guarantee 100% replacement part fitment</span>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-amber-300 mb-1 font-mono uppercase">
                     Vehicle Chassis Code / VIN *
                   </label>
@@ -259,7 +258,7 @@ const stats = [
                   />
                 </div>
 
-                <div>
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-white/70 mb-1">Part Category</label>
                   <select
                     v-model="partsCategory"
@@ -277,12 +276,12 @@ const stats = [
 
               <!-- Quick Chassis Pills -->
               <div class="flex items-center gap-1.5 flex-wrap text-xs">
-                <span class="text-white/60 text-[11px]">Popular Chassis:</span>
+                <span class="text-white/60 text-[11px] shrink-0">Popular Chassis:</span>
                 <button
                   v-for="code in popularChassisTags"
                   :key="code"
                   @click="partsChassisInput = code; handlePartsSearch()"
-                  class="px-2 py-0.5 bg-white/10 hover:bg-amber-400 hover:text-gray-950 text-white rounded text-[11px] font-mono transition-colors"
+                  class="px-2 py-0.5 bg-white/10 hover:bg-amber-400 hover:text-gray-950 text-white rounded text-[11px] font-mono transition-colors shrink-0"
                 >
                   {{ code }}
                 </button>
@@ -290,16 +289,16 @@ const stats = [
 
               <button
                 @click="handlePartsSearch"
-                class="w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-gray-950 font-black rounded-2xl transition-all shadow-glow-accent text-sm flex items-center justify-center gap-2"
+                class="w-full py-3 sm:py-3.5 bg-amber-400 hover:bg-amber-300 text-gray-950 font-black rounded-xl sm:rounded-2xl transition-all shadow-glow-accent text-xs sm:text-sm flex items-center justify-center gap-2"
               >
                 Find Guaranteed Compatible Parts →
               </button>
             </div>
 
             <!-- TAB 3: SERVICES & GARAGES -->
-            <div v-else-if="activeTab === 'services'" class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
+            <div v-else-if="activeTab === 'services'" class="space-y-3.5 sm:space-y-4 w-full min-w-0">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-white/70 mb-1">Service Required</label>
                   <select
                     v-model="serviceType"
@@ -312,7 +311,7 @@ const stats = [
                   </select>
                 </div>
 
-                <div>
+                <div class="min-w-0">
                   <label class="block text-[11px] font-semibold text-white/70 mb-1">District / City</label>
                   <select
                     v-model="serviceDistrict"
@@ -329,34 +328,34 @@ const stats = [
 
               <button
                 @click="handleServiceSearch"
-                class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-extrabold rounded-2xl transition-all text-sm flex items-center justify-center gap-2"
+                class="w-full py-3 sm:py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-extrabold rounded-xl sm:rounded-2xl transition-all text-xs sm:text-sm flex items-center justify-center gap-2"
               >
                 Browse Certified Auto Garages & Stations →
               </button>
             </div>
 
             <!-- TAB 4: 24/7 TOWING SOS -->
-            <div v-else-if="activeTab === 'towing'" class="space-y-4">
-              <div class="p-4 bg-red-600/20 border border-red-500/40 rounded-2xl">
+            <div v-else-if="activeTab === 'towing'" class="space-y-3.5 sm:space-y-4 w-full min-w-0">
+              <div class="p-3.5 sm:p-4 bg-red-600/20 border border-red-500/40 rounded-xl sm:rounded-2xl">
                 <div class="flex items-center gap-2 text-red-300 font-bold text-xs uppercase mb-1">
-                  <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping" />
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping shrink-0" />
                   <span>Immediate Emergency Roadside Dispatch</span>
                 </div>
-                <p class="text-white/80 text-xs">
+                <p class="text-white/80 text-xs leading-relaxed">
                   Accident, dead battery, or mechanical breakdown? Our hydraulic flatbed fleet responds in under 20 minutes across Colombo and Expressways.
                 </p>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                 <a
                   href="tel:+94779992424"
-                  class="py-3.5 bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl text-center text-sm shadow-glow-red flex items-center justify-center gap-2"
+                  class="py-3 sm:py-3.5 bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl text-center text-xs sm:text-sm shadow-glow-red flex items-center justify-center gap-2"
                 >
                   📞 Direct Call 077 999 2424
                 </a>
                 <NuxtLink
                   to="/services/towing"
-                  class="py-3.5 bg-white/15 hover:bg-white/25 text-white font-bold rounded-xl text-center text-sm border border-white/20 flex items-center justify-center gap-2"
+                  class="py-3 sm:py-3.5 bg-white/15 hover:bg-white/25 text-white font-bold rounded-xl text-center text-xs sm:text-sm border border-white/20 flex items-center justify-center gap-2"
                 >
                   Towing Cost & ETA Calculator →
                 </NuxtLink>
@@ -364,26 +363,26 @@ const stats = [
             </div>
 
             <!-- TAB 5: FINANCE & INSURANCE -->
-            <div v-else-if="activeTab === 'finance'" class="space-y-4">
-              <div class="p-3.5 bg-emerald-500/15 border border-emerald-400/30 rounded-2xl text-xs text-emerald-200">
+            <div v-else-if="activeTab === 'finance'" class="space-y-3.5 sm:space-y-4 w-full min-w-0">
+              <div class="p-3.5 bg-emerald-500/15 border border-emerald-400/30 rounded-xl sm:rounded-2xl text-xs text-emerald-200 leading-relaxed">
                 Compare bank leasing rates (Commercial Bank, Sampath, HNB) & get instant auto insurance quotes.
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                 <NuxtLink
                   to="/finance/loan-calculator"
-                  class="p-4 bg-gray-950 border border-white/10 rounded-2xl hover:border-primary/40 transition-all text-center"
+                  class="p-3.5 sm:p-4 bg-gray-950 border border-white/10 rounded-xl sm:rounded-2xl hover:border-primary/40 transition-all text-center"
                 >
-                  <div class="text-xl mb-1">📊</div>
+                  <div class="text-lg sm:text-xl mb-1">📊</div>
                   <div class="font-bold text-white text-xs">Auto Loan EMI Calculator</div>
                   <div class="text-[11px] text-white/50 mt-0.5">Calculate monthly repayment</div>
                 </NuxtLink>
 
                 <NuxtLink
                   to="/finance/insurance"
-                  class="p-4 bg-gray-950 border border-white/10 rounded-2xl hover:border-primary/40 transition-all text-center"
+                  class="p-3.5 sm:p-4 bg-gray-950 border border-white/10 rounded-xl sm:rounded-2xl hover:border-primary/40 transition-all text-center"
                 >
-                  <div class="text-xl mb-1">🛡️</div>
+                  <div class="text-lg sm:text-xl mb-1">🛡️</div>
                   <div class="font-bold text-white text-xs">Vehicle Insurance Quotes</div>
                   <div class="text-[11px] text-white/50 mt-0.5">Ceylinco, SLIC, Allianz quotes</div>
                 </NuxtLink>
@@ -392,40 +391,40 @@ const stats = [
           </div>
 
           <!-- Live Ecosystem Stats -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/10">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/10 w-full min-w-0">
             <div
               v-for="stat in stats"
               :key="stat.label"
-              class="flex flex-col"
+              class="flex flex-col min-w-0"
             >
-              <div class="flex items-center gap-1.5 text-lg font-mono font-black text-white">
-                <span>{{ stat.icon }}</span>
-                <span>{{ stat.value }}</span>
+              <div class="flex items-center gap-1.5 text-base sm:text-lg font-mono font-black text-white">
+                <span class="shrink-0">{{ stat.icon }}</span>
+                <span class="truncate">{{ stat.value }}</span>
               </div>
-              <span class="text-xs text-white/60 mt-0.5">{{ stat.label }}</span>
+              <span class="text-[11px] sm:text-xs text-white/60 mt-0.5 truncate">{{ stat.label }}</span>
             </div>
           </div>
         </div>
 
         <!-- Right Side: Animated Luxury Vehicle Showcase Card (5 cols) -->
-        <div class="lg:col-span-5 relative">
+        <div class="w-full min-w-0 max-w-full lg:col-span-5 relative mt-6 lg:mt-0">
           <!-- Ambient Glow under vehicle card -->
-          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-amber-500 rounded-3xl blur-xl opacity-30 animate-pulse" />
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-amber-500 rounded-3xl blur-xl opacity-30 animate-pulse pointer-events-none" />
 
-          <div class="relative bg-gray-900 border border-white/20 rounded-3xl overflow-hidden shadow-2xl p-5 backdrop-blur-md">
+          <div class="relative bg-gray-900 border border-white/20 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl p-4 sm:p-5 backdrop-blur-md w-full min-w-0">
             <!-- Showcase Header -->
             <div class="flex items-center justify-between pb-3 border-b border-white/10 text-xs">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <NuxtLink :to="`/dealers/${currentCar.dealerId}`" class="text-white/90 hover:text-primary font-semibold flex items-center gap-1">
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                <NuxtLink :to="`/dealers/${currentCar.dealerId}`" class="text-white/90 hover:text-primary font-semibold flex items-center gap-1 truncate">
                   🏬 {{ currentCar.badge }} →
                 </NuxtLink>
               </div>
-              <span class="font-mono font-bold text-primary">{{ currentCar.price }}</span>
+              <span class="font-mono font-bold text-primary shrink-0 ml-2">{{ currentCar.price }}</span>
             </div>
 
             <!-- Dynamic Image Showcase -->
-            <div class="relative h-56 sm:h-64 my-3 rounded-2xl overflow-hidden bg-gray-950">
+            <div class="relative h-48 sm:h-56 md:h-64 my-3 rounded-xl sm:rounded-2xl overflow-hidden bg-gray-950">
               <Transition name="fade" mode="out-in">
                 <img
                   :key="currentCar.id"
@@ -437,51 +436,51 @@ const stats = [
               </Transition>
 
               <!-- Telemetry Overlay Badge -->
-              <div class="absolute top-3 left-3 px-3 py-1 bg-black/75 backdrop-blur-md text-white text-[11px] font-mono rounded-lg border border-white/20">
+              <div class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-mono rounded-lg border border-white/20">
                 Chassis: {{ currentCar.chassis }}
               </div>
-              <div class="absolute bottom-3 right-3 px-3 py-1 bg-primary text-white text-xs font-bold rounded-lg shadow-sm">
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 bg-primary text-white text-[11px] sm:text-xs font-bold rounded-lg shadow-sm">
                 {{ currentCar.mode }}
               </div>
             </div>
 
             <!-- Car Title & Live Specs Grid -->
             <div>
-              <h3 class="font-display font-bold text-white text-lg leading-tight mb-3">
+              <h3 class="font-display font-bold text-white text-base sm:text-lg leading-tight mb-3 truncate">
                 {{ currentCar.name }}
               </h3>
 
-              <div class="grid grid-cols-3 gap-2 text-center text-xs">
-                <div class="p-2 bg-white/5 border border-white/10 rounded-xl">
-                  <div class="text-[10px] text-white/50 uppercase">Efficiency</div>
-                  <div class="font-mono font-bold text-emerald-400 text-xs mt-0.5">{{ currentCar.fuelEconomy }}</div>
+              <div class="grid grid-cols-3 gap-1.5 sm:gap-2 text-center text-xs">
+                <div class="p-1.5 sm:p-2 bg-white/5 border border-white/10 rounded-xl min-w-0">
+                  <div class="text-[9px] sm:text-[10px] text-white/50 uppercase truncate">Efficiency</div>
+                  <div class="font-mono font-bold text-emerald-400 text-[11px] sm:text-xs mt-0.5 truncate">{{ currentCar.fuelEconomy }}</div>
                 </div>
-                <div class="p-2 bg-white/5 border border-white/10 rounded-xl">
-                  <div class="text-[10px] text-white/50 uppercase">0-100 km/h</div>
-                  <div class="font-mono font-bold text-amber-300 text-xs mt-0.5">{{ currentCar.zeroHundred }}</div>
+                <div class="p-1.5 sm:p-2 bg-white/5 border border-white/10 rounded-xl min-w-0">
+                  <div class="text-[9px] sm:text-[10px] text-white/50 uppercase truncate">0-100 km/h</div>
+                  <div class="font-mono font-bold text-amber-300 text-[11px] sm:text-xs mt-0.5 truncate">{{ currentCar.zeroHundred }}</div>
                 </div>
-                <div class="p-2 bg-white/5 border border-white/10 rounded-xl">
-                  <div class="text-[10px] text-white/50 uppercase">Showroom</div>
-                  <div class="font-semibold text-white text-[11px] mt-0.5 truncate">Verified Stock</div>
+                <div class="p-1.5 sm:p-2 bg-white/5 border border-white/10 rounded-xl min-w-0">
+                  <div class="text-[9px] sm:text-[10px] text-white/50 uppercase truncate">Showroom</div>
+                  <div class="font-semibold text-white text-[10px] sm:text-[11px] mt-0.5 truncate">Verified Stock</div>
                 </div>
               </div>
 
               <!-- Action button to view Dealer Store -->
-              <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between gap-3">
-                <NuxtLink :to="`/dealers/${currentCar.dealerId}`" class="flex-1">
-                  <AppButton variant="primary" size="sm" full-width class="font-bold text-xs">
+              <div class="mt-4 pt-3 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <NuxtLink :to="`/dealers/${currentCar.dealerId}`" class="flex-1 min-w-0">
+                  <AppButton variant="primary" size="sm" full-width class="font-bold text-xs py-2.5">
                     View Dealer Store & All Stock →
                   </AppButton>
                 </NuxtLink>
 
                 <!-- Selector Dots -->
-                <div class="flex items-center gap-1.5 shrink-0">
+                <div class="flex items-center justify-center gap-1.5 shrink-0 py-1">
                   <button
                     v-for="(_, idx) in showcaseCars"
                     :key="idx"
                     :class="[
-                      'w-2.5 h-2.5 rounded-full transition-all',
-                      activeCarIndex === idx ? 'bg-primary w-6' : 'bg-white/30 hover:bg-white/60'
+                      'h-2.5 rounded-full transition-all',
+                      activeCarIndex === idx ? 'bg-primary w-6' : 'bg-white/30 hover:bg-white/60 w-2.5'
                     ]"
                     @click="activeCarIndex = idx"
                   />

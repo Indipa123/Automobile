@@ -16,6 +16,9 @@ const info = computed(() =>
 )
 
 const handleError = () => clearError({ redirect: '/' })
+const goBack = () => {
+  if (import.meta.client) window.history.back()
+}
 </script>
 
 <template>
@@ -33,7 +36,7 @@ const handleError = () => clearError({ redirect: '/' })
       </button>
       <button
         class="px-6 py-3 border border-border text-gray-600 hover:text-gray-900 rounded-xl transition-colors"
-        @click="() => history.back()"
+        @click="goBack"
       >
         ← Go Back
       </button>

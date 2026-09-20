@@ -14,7 +14,7 @@ defineProps<{ breakdown: RatingBreakdown }>()
       </div>
       <div class="flex-1 space-y-2">
         <div
-          v-for="stars in [5, 4, 3, 2, 1]"
+          v-for="stars in ([5, 4, 3, 2, 1] as const)"
           :key="stars"
           class="flex items-center gap-2"
         >
@@ -25,10 +25,10 @@ defineProps<{ breakdown: RatingBreakdown }>()
           <div class="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
             <div
               class="h-full bg-amber-400 rounded-full transition-all"
-              :style="{ width: `${((breakdown.distribution[stars as keyof typeof breakdown.distribution] || 0) / breakdown.total) * 100}%` }"
+              :style="{ width: `${((breakdown.distribution[stars] || 0) / breakdown.total) * 100}%` }"
             />
           </div>
-          <span class="text-muted text-xs w-8 text-right">{{ breakdown.distribution[stars as keyof typeof breakdown.distribution] || 0 }}</span>
+          <span class="text-muted text-xs w-8 text-right">{{ breakdown.distribution[stars] || 0 }}</span>
         </div>
       </div>
     </div>

@@ -96,21 +96,21 @@ const ecosystemPillars = [
     <HeroSection />
 
     <!-- 24/7 Emergency Towing Islandwide Ticker Strip -->
-    <div class="bg-gray-900 border-y border-white/10 py-3.5 px-4">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-        <div class="flex items-center gap-2.5 text-white/90 font-medium">
+    <div class="bg-gray-900 border-y border-white/10 py-3.5 px-4 w-full overflow-hidden">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2.5 text-white/90 font-medium flex-wrap">
           <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping shrink-0" />
-          <span class="font-bold text-white">24/7 Roadside Towing SOS Hotline:</span>
+          <span class="font-bold text-white shrink-0">24/7 Roadside Towing SOS Hotline:</span>
           <span class="text-white/70">Stranded on highway or road? Hydraulic flatbeds on standby across Sri Lanka.</span>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 shrink-0 flex-wrap w-full md:w-auto justify-between md:justify-end pt-1 md:pt-0 border-t md:border-t-0 border-white/10">
           <a
             href="tel:+94779992424"
-            class="px-3 py-1.5 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors shadow-xs"
+            class="px-3 py-1.5 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors shadow-xs shrink-0 text-[11px] sm:text-xs"
           >
             📞 Emergency Dispatch: 077 999 2424
           </a>
-          <NuxtLink to="/services/towing" class="text-amber-400 hover:underline font-semibold">
+          <NuxtLink to="/services/towing" class="text-amber-400 hover:underline font-semibold shrink-0 text-[11px] sm:text-xs">
             Fare Calculator →
           </NuxtLink>
         </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  modelValue: string | null
+  modelValue?: string | null | undefined
   options: { value: string; label: string }[]
   placeholder?: string
   searchable?: boolean
@@ -8,11 +8,12 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  modelValue: null,
   placeholder: 'Select...',
   searchable: false,
 })
 
-const emit = defineEmits<{ 'update:modelValue': [value: string | null] }>()
+const emit = defineEmits<{ 'update:modelValue': [value: string | null | undefined] }>()
 
 const open = ref(false)
 const search = ref('')

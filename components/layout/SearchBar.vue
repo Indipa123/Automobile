@@ -19,6 +19,12 @@ const handleSearch = () => {
     focused.value = false
   }
 }
+
+const handleBlur = () => {
+  setTimeout(() => {
+    focused.value = false
+  }, 200)
+}
 </script>
 
 <template>
@@ -33,7 +39,7 @@ const handleSearch = () => {
         placeholder="Search make, model, or keyword..."
         class="flex-1 bg-transparent text-gray-900 placeholder-muted text-sm focus:outline-none"
         @focus="focused = true"
-        @blur="setTimeout(() => { focused = false }, 200)"
+        @blur="handleBlur"
         @keydown.enter="handleSearch"
       />
       <button v-if="query" class="text-muted hover:text-gray-900" @click="query = ''">✕</button>
