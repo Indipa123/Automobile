@@ -7,11 +7,11 @@ const banners = [
 const active = ref(0)
 </script>
 <template>
-  <section aria-label="Home page banners" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-    <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-gray-900 via-slate-800 to-primary text-white p-7 sm:p-10 min-h-64 flex items-center">
-      <div class="relative z-10 max-w-xl"><p class="text-amber-300 text-sm font-bold uppercase tracking-wide">{{ banners[active].eyebrow }}</p><h2 class="text-2xl sm:text-4xl font-display font-bold mt-2">{{ banners[active].title }}</h2><p class="text-white/80 mt-3">{{ banners[active].text }}</p><NuxtLink :to="banners[active].href" class="inline-flex mt-5 rounded-xl bg-white text-gray-900 font-bold px-5 py-3 hover:bg-gray-100">{{ banners[active].action }} →</NuxtLink></div>
-      <div class="hidden sm:block absolute right-10 text-8xl opacity-40" aria-hidden="true">{{ banners[active].icon }}</div>
+  <section aria-label="Home page banners" class="w-full mb-6 sm:mb-10">
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-red-700 to-gray-900 text-white p-5 sm:px-8 sm:py-6 min-h-44 flex items-center border border-white/20 shadow-xl">
+      <div class="relative z-10 max-w-3xl"><p class="text-amber-300 text-sm font-bold uppercase tracking-wide">{{ banners[active].eyebrow }}</p><h2 class="text-xl sm:text-3xl font-display font-bold mt-1">{{ banners[active].title }}</h2><p class="text-white/80 mt-1 text-sm">{{ banners[active].text }}</p><NuxtLink :to="banners[active].href" class="inline-flex mt-3 rounded-lg bg-white text-gray-900 text-sm font-bold px-4 py-2.5 hover:bg-gray-100">{{ banners[active].action }} →</NuxtLink></div>
+      <div class="hidden md:block absolute right-8 text-7xl opacity-30" aria-hidden="true">{{ banners[active].icon }}</div>
     </div>
-    <div class="flex justify-center gap-2 mt-3"><button v-for="(banner, index) in banners" :key="banner.title" type="button" :aria-label="`Show banner ${index + 1}: ${banner.title}`" :aria-current="active === index ? 'true' : undefined" :class="['h-2 rounded-full transition-all', active === index ? 'w-8 bg-primary' : 'w-2 bg-gray-300']" @click="active = index" /></div>
+    <div class="flex justify-center gap-2 mt-2"><button v-for="(banner, index) in banners" :key="banner.title" type="button" :aria-label="`Show banner ${index + 1}: ${banner.title}`" :aria-current="active === index ? 'true' : undefined" :class="['h-2 rounded-full transition-all', active === index ? 'w-8 bg-primary' : 'w-2 bg-gray-300']" @click="active = index" /></div>
   </section>
 </template>

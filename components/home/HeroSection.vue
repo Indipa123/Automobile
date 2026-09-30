@@ -132,7 +132,8 @@ const stats = [
       />
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0 max-w-full py-8 sm:py-16 md:py-20 lg:py-24">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0 max-w-full py-8 sm:py-12 lg:py-16">
+      <HomeBanners />
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full min-w-0 max-w-full">
         <!-- Left Side: Headline & 5-in-1 Universal Search (7 cols) -->
         <div class="w-full min-w-0 max-w-full lg:col-span-7">
