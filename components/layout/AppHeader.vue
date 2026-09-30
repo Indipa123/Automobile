@@ -17,10 +17,8 @@ const navLinks = [
   { id: 'parts', label: 'Spare Parts', href: '/parts', hasMega: true },
   { id: 'services', label: 'Services', href: '/services', hasMega: true },
   { id: 'dealers', label: 'Dealers', href: '/dealers' },
-  { id: 'fuel', label: 'Fuel & EV', href: '/fuel' },
-  { id: 'clubs', label: 'Clubs', href: '/clubs' },
-  { id: 'finance', label: 'Finance & Insurance', href: '/finance' },
-  { id: 'news', label: 'News', href: '/news' },
+  { id: 'finance', label: 'Finance', href: '/finance' },
+  { id: 'community', label: 'Community', href: '/clubs', hasMega: true },
 ]
 
 const bodyTypes = [
@@ -54,7 +52,7 @@ const popularBrands = ['Toyota', 'Honda', 'Suzuki', 'Nissan', 'Mitsubishi', 'BMW
         </NuxtLink>
 
         <!-- Desktop Nav -->
-        <nav class="hidden lg:flex items-center gap-1">
+        <nav class="hidden xl:flex items-center gap-0.5 whitespace-nowrap">
           <div
             v-for="link in navLinks"
             :key="link.id"
@@ -65,7 +63,7 @@ const popularBrands = ['Toyota', 'Honda', 'Suzuki', 'Nissan', 'Mitsubishi', 'BMW
             <NuxtLink
               :to="link.href"
               :class="[
-                'px-3 py-2 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-1',
+                'px-2.5 py-2 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-1 whitespace-nowrap',
                 route.path.startsWith(link.href) && link.href !== '/'
                   ? 'text-primary font-semibold'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
@@ -219,6 +217,11 @@ const popularBrands = ['Toyota', 'Honda', 'Suzuki', 'Nissan', 'Mitsubishi', 'BMW
                   </div>
                 </NuxtLink>
 
+                <div class="grid grid-cols-2 gap-2 border-t border-border pt-3">
+                  <NuxtLink to="/fuel" class="rounded-lg bg-amber-50 p-3 text-xs font-semibold text-amber-900 hover:bg-amber-100">⛽ Fuel prices & stations</NuxtLink>
+                  <NuxtLink to="/charging" class="rounded-lg bg-blue-50 p-3 text-xs font-semibold text-blue-900 hover:bg-blue-100">⚡ EV charging points</NuxtLink>
+                </div>
+
                 <!-- Service Stations Card -->
                 <NuxtLink
                   to="/services/service-stations"
@@ -234,15 +237,23 @@ const popularBrands = ['Toyota', 'Honda', 'Suzuki', 'Nissan', 'Mitsubishi', 'BMW
                 </NuxtLink>
               </div>
             </Transition>
+
+            <Transition name="dropdown">
+              <div v-if="link.id === 'community' && megaMenuOpen === 'community'" class="absolute right-0 top-full mt-1 w-64 rounded-2xl border border-border bg-white p-3 shadow-xl">
+                <NuxtLink to="/clubs" class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">🏁 Vehicle clubs</NuxtLink>
+                <NuxtLink to="/news" class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">📰 News & guides</NuxtLink>
+                <NuxtLink to="/reviews" class="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">⭐ Reviews</NuxtLink>
+              </div>
+            </Transition>
           </div>
         </nav>
 
         <!-- Right actions -->
-        <div class="flex items-center gap-2.5">
+        <div class="flex shrink-0 items-center gap-2 whitespace-nowrap">
           <!-- 24/7 Towing SOS Emergency Button -->
           <NuxtLink
             to="/services/towing"
-            class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 bg-red-50 hover:bg-red-100 border border-red-200 text-primary text-xs font-extrabold rounded-lg transition-all"
+            class="hidden 2xl:flex items-center gap-1.5 px-3.5 py-1.5 bg-red-50 hover:bg-red-100 border border-red-200 text-primary text-xs font-extrabold rounded-lg transition-all"
             title="24/7 Emergency Towing Islandwide"
           >
             <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
@@ -273,14 +284,14 @@ const popularBrands = ['Toyota', 'Honda', 'Suzuki', 'Nissan', 'Mitsubishi', 'BMW
           <!-- Post Ad button -->
           <NuxtLink
             to="/sell/post-ad"
-            class="hidden sm:flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-lg transition-colors shadow-glow-red"
+            class="hidden sm:flex items-center gap-1.5 px-4 py-2 whitespace-nowrap bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-lg transition-colors shadow-glow-red"
           >
             + Post Free Ad
           </NuxtLink>
 
           <!-- Mobile hamburger -->
           <button
-            class="lg:hidden flex w-9 h-9 items-center justify-center rounded-lg hover:bg-gray-100 text-gray-600"
+            class="xl:hidden flex w-9 h-9 items-center justify-center rounded-lg hover:bg-gray-100 text-gray-600"
             @click="uiStore.toggleMobileMenu"
           >
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

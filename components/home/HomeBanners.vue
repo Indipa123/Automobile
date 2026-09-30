@@ -32,7 +32,7 @@ const showNext = () => { active.value = (active.value + 1) % banners.length }
 
 <template>
   <section aria-label="Home page banners" class="w-full mb-8 sm:mb-12">
-    <div class="relative isolate flex min-h-[350px] sm:min-h-[410px] lg:min-h-[460px] items-center overflow-hidden rounded-2xl sm:rounded-3xl bg-gray-900 border border-white/20 shadow-2xl">
+    <div class="relative isolate flex h-[400px] sm:h-[420px] lg:h-[460px] items-center overflow-hidden rounded-2xl sm:rounded-3xl bg-gray-900 border border-white/20 shadow-2xl">
       <img
         :key="banners[active].image"
         :src="banners[active].image"
@@ -42,7 +42,7 @@ const showNext = () => { active.value = (active.value + 1) % banners.length }
       <div class="absolute inset-0 bg-gradient-to-r from-gray-950/95 via-gray-950/75 to-gray-950/20" />
       <div class="absolute inset-0 bg-gradient-to-t from-gray-950/55 via-transparent to-transparent" />
 
-      <div class="relative z-10 w-full max-w-3xl px-7 py-16 sm:px-12 lg:px-16">
+      <div class="relative z-10 w-full max-w-3xl px-7 py-8 sm:px-12 sm:py-12 lg:px-16">
         <p class="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-300 backdrop-blur-sm">{{ banners[active].eyebrow }}</p>
         <h2 class="mt-5 max-w-2xl font-display text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white">{{ banners[active].title }}</h2>
         <p class="mt-4 max-w-xl text-sm sm:text-lg leading-relaxed text-white/85">{{ banners[active].text }}</p>
