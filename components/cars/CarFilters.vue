@@ -81,6 +81,22 @@ const provinceOptions = computed(() => provinces.map(p => ({ value: p, label: p 
       />
     </div>
 
+    <div class="grid grid-cols-2 gap-3">
+      <label class="text-xs text-muted">Registration
+        <select v-model="filters.registrationStatus" class="mt-1 w-full rounded-lg border border-border bg-white p-2.5 text-sm text-gray-900">
+          <option value="">Any</option><option value="registered">Registered</option><option value="unregistered">Unregistered</option>
+        </select>
+      </label>
+      <label class="text-xs text-muted">Seller
+        <select v-model="filters.sellerType" class="mt-1 w-full rounded-lg border border-border bg-white p-2.5 text-sm text-gray-900">
+          <option value="">Any</option><option value="private">Individual</option><option value="dealer">Dealer</option>
+        </select>
+      </label>
+    </div>
+    <label class="block text-xs text-muted">Maximum previous owners
+      <input v-model.number="filters.ownershipMax" type="number" min="1" placeholder="Any" class="mt-1 w-full rounded-lg border border-border bg-white p-2.5 text-sm text-gray-900" />
+    </label>
+
     <!-- Year Range -->
     <div>
       <label class="text-xs text-muted uppercase tracking-wide mb-2 block">Year Range</label>

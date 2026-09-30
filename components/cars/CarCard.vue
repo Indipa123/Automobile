@@ -116,6 +116,7 @@ const toggleCompare = (e: Event) => {
         <DealRatingBadge :rating="car.dealRating" class="flex-shrink-0 mt-0.5" />
       </div>
 
+      <div class="flex flex-wrap gap-1 mt-2"><span v-if="car.registrationStatus" class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-semibold text-blue-700 capitalize">{{ car.registrationStatus }}</span><span class="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] text-gray-700">{{ car.sellerType === 'private' ? 'Individual seller' : 'Dealer' }}</span></div>
       <p class="font-mono font-bold text-primary text-lg mt-2">
         {{ formatLKRFull(car.price) }}
       </p>

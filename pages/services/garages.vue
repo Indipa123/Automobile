@@ -28,7 +28,7 @@ const garages = computed<ServiceProvider[]>(() => (data.value as any)?.services 
           Automobile Garages & Specialized Workshops
         </h1>
         <p class="text-white/70 text-sm max-w-2xl">
-          Verified mechanics, hybrid and EV high voltage battery diagnostics, transmission rebuilds, and European computer diagnostics.
+          Registered garages and workshops for vehicle care across Sri Lanka.
         </p>
       </div>
     </div>
@@ -48,7 +48,7 @@ const garages = computed<ServiceProvider[]>(() => (data.value as any)?.services 
               @error="(e: any) => e.target.src = 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=500&fit=crop&auto=format'"
             />
             <div class="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-[10px] font-bold rounded-md">
-              Specialized Workshop
+              Registered garage
             </div>
             <div class="absolute top-3 right-3 px-2 py-0.5 bg-black/70 text-white text-[10px] rounded">
               ★ {{ garage.rating.toFixed(1) }} ({{ garage.reviewCount }})

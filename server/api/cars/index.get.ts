@@ -15,6 +15,19 @@ export default defineEventHandler((event) => {
     filtered = filtered.filter(c => c.make.toLowerCase() === String(query.make).toLowerCase())
   }
 
+  if (query.model) filtered = filtered.filter(c => c.model.toLowerCase().includes(String(query.model).toLowerCase()))
+  if (query.registrationStatus) filtered = filtered.filter(c => c.registrationStatus === query.registrationStatus)
+  if (query.sellerType) filtered = filtered.filter(c => c.sellerType === query.sellerType)
+  if (query.ownershipMax) filtered = filtered.filter(c => c.ownershipCount !== undefined && c.ownershipCount <= Number(query.ownershipMax))
+  if (query.yearMin) filtered = filtered.filter(c => c.year >= Number(query.yearMin))
+  if (query.yearMax) filtered = filtered.filter(c => c.year <= Number(query.yearMax))
+  if (query.province) filtered = filtered.filter(c => c.location.province.toLowerCase() === String(query.province).toLowerCase())
+  if (query.mileageMax) filtered = filtered.filter(c => c.mileage <= Number(query.mileageMax))
+  if (query.transmission) {
+    const values = Array.isArray(query.transmission) ? query.transmission : [query.transmission]
+    filtered = filtered.filter(c => values.includes(c.transmission))
+  }
+
   // Filter by bodyType
   if (query.bodyType) {
     const types = Array.isArray(query.bodyType) ? query.bodyType : [query.bodyType]
@@ -63,7 +76,7 @@ export default defineEventHandler((event) => {
   const total = filtered.length
   const totalPages = Math.ceil(total / limit)
   const start = (page - 1) * limit
-  const cars = filtered.slice(start, start + limit)
+  const cars = filtered.slice(start, start + limit).map(({ sellerPhone, ...car }) => car)
 
   return { cars, total, page, totalPages }
 })

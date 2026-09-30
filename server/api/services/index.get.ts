@@ -3,7 +3,7 @@ import { mockServices } from '~/server/utils/mockServices'
 export default defineEventHandler((event) => {
   const query = getQuery(event)
 
-  let filtered = [...mockServices]
+  let filtered = mockServices.filter(service => service.type !== 'garage' || service.registered === true)
 
   // Filter by Type
   if (query.type && query.type !== 'all') {

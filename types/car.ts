@@ -42,6 +42,12 @@ export interface Car {
   dealer?: Dealer
   dealerId?: string
   sellerType: 'dealer' | 'private'
+  sellerName?: string
+  sellerPhone?: string
+  registrationStatus?: 'registered' | 'unregistered'
+  registrationYear?: number
+  ownershipCount?: number
+  ownershipNote?: string
   dealRating: DealRating
   marketValue: number
   safetyRating: number
@@ -63,6 +69,9 @@ export interface CarFilters {
   condition?: CarCondition | 'all'
   make?: string
   model?: string
+  registrationStatus?: 'registered' | 'unregistered'
+  sellerType?: 'dealer' | 'private'
+  ownershipMax?: number
   dealerId?: string
   yearMin?: number
   yearMax?: number

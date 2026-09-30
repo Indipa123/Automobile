@@ -19,6 +19,13 @@ const showMobileFilters = ref(false)
 // Sync URL query to filters
 onMounted(() => {
   if (route.query.make) filtersStore.filters.make = String(route.query.make)
+  if (route.query.model) filtersStore.filters.model = String(route.query.model)
+  if (route.query.registrationStatus) filtersStore.filters.registrationStatus = route.query.registrationStatus as any
+  if (route.query.sellerType) filtersStore.filters.sellerType = route.query.sellerType as any
+  if (route.query.ownershipMax) filtersStore.filters.ownershipMax = Number(route.query.ownershipMax)
+  if (route.query.yearMin) filtersStore.filters.yearMin = Number(route.query.yearMin)
+  if (route.query.yearMax) filtersStore.filters.yearMax = Number(route.query.yearMax)
+  if (route.query.province) filtersStore.filters.province = String(route.query.province)
   if (route.query.condition) filtersStore.filters.condition = route.query.condition as any
   if (route.query.bodyType) filtersStore.filters.bodyType = [route.query.bodyType as any]
   if (route.query.priceMax) filtersStore.filters.priceMax = Number(route.query.priceMax)
@@ -32,6 +39,13 @@ const loadCars = () => {
 
 const handleFilterApply = () => {
   showMobileFilters.value = false
+  const query: Record<string, string> = {}
+  const filters = filtersStore.filters
+  for (const key of ['make', 'model', 'condition', 'registrationStatus', 'sellerType', 'ownershipMax', 'yearMin', 'yearMax', 'priceMin', 'priceMax', 'province'] as const) {
+    const value = filters[key]
+    if (value !== undefined && value !== '' && value !== 'all') query[key] = String(value)
+  }
+  router.replace({ query })
   loadCars()
 }
 

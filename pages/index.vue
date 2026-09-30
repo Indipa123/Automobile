@@ -94,6 +94,7 @@ const ecosystemPillars = [
   <div>
     <!-- Hero with Luxury Animated Showcase & 5-in-1 Universal Search -->
     <HeroSection />
+    <HomeBanners />
 
     <!-- 24/7 Emergency Towing Islandwide Ticker Strip -->
     <div class="bg-gray-900 border-y border-white/10 py-3.5 px-4 w-full overflow-hidden">

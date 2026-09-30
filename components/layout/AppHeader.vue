@@ -17,6 +17,8 @@ const navLinks = [
   { id: 'parts', label: 'Spare Parts', href: '/parts', hasMega: true },
   { id: 'services', label: 'Services', href: '/services', hasMega: true },
   { id: 'dealers', label: 'Dealers', href: '/dealers' },
+  { id: 'fuel', label: 'Fuel & EV', href: '/fuel' },
+  { id: 'clubs', label: 'Clubs', href: '/clubs' },
   { id: 'finance', label: 'Finance & Insurance', href: '/finance' },
   { id: 'news', label: 'News', href: '/news' },
 ]

@@ -9,6 +9,7 @@ const router = useRouter()
 
 const form = reactive({
   // Step 1: Vehicle info
+  sellerType: 'private', registrationStatus: 'registered', registrationYear: '', ownershipCount: '', ownershipNote: '',
   make: '', model: '', year: new Date().getFullYear(), variant: '', bodyType: '', condition: 'used',
   // Step 2: Specs
   engineCC: '', fuelType: '', transmission: '', mileage: '', color: '', seats: 5,
@@ -49,8 +50,7 @@ const suggestedRange = computed(() => {
 })
 
 const handleSubmit = () => {
-  uiStore.addToast('Your ad has been submitted! We\'ll review and publish it shortly.', 'success')
-  router.push('/account/my-ads')
+  uiStore.addToast('This is a preview form. Your ad has not been submitted yet.', 'info')
 }
 
 const stepTitles = [
@@ -92,6 +92,23 @@ const stepTitles = [
         <!-- Step 1: Vehicle Info -->
         <div v-if="currentStep === 1" class="space-y-5">
           <h2 class="font-display font-bold text-gray-900 text-xl">Tell us about your vehicle</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="text-sm text-muted">I am selling as
+              <select v-model="form.sellerType" class="mt-1 w-full rounded-xl border border-border bg-background p-3 text-gray-900"><option value="private">Individual seller</option><option value="dealer">Dealer</option></select>
+            </label>
+            <label class="text-sm text-muted">Registration status
+              <select v-model="form.registrationStatus" class="mt-1 w-full rounded-xl border border-border bg-background p-3 text-gray-900"><option value="registered">Registered</option><option value="unregistered">Unregistered</option></select>
+            </label>
+            <label v-if="form.registrationStatus === 'registered'" class="text-sm text-muted">First registration year
+              <input v-model="form.registrationYear" type="number" class="mt-1 w-full rounded-xl border border-border bg-background p-3 text-gray-900" />
+            </label>
+            <label class="text-sm text-muted">Number of previous owners
+              <input v-model="form.ownershipCount" type="number" min="0" placeholder="If known" class="mt-1 w-full rounded-xl border border-border bg-background p-3 text-gray-900" />
+            </label>
+            <label class="sm:col-span-2 text-sm text-muted">{{ form.registrationStatus === 'unregistered' ? 'Why is it unregistered? Who will register it?' : 'Ownership details' }}
+              <textarea v-model="form.ownershipNote" rows="2" class="mt-1 w-full rounded-xl border border-border bg-background p-3 text-gray-900" />
+            </label>
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-muted block mb-1.5">Make *</label>
@@ -276,6 +293,8 @@ const stepTitles = [
             <div class="grid grid-cols-2 gap-2 text-xs text-muted">
               <div>Vehicle: <span class="text-gray-900">{{ form.year }} {{ form.make }} {{ form.model }}</span></div>
               <div>Condition: <span class="text-gray-900 capitalize">{{ form.condition }}</span></div>
+              <div>Registration: <span class="text-gray-900 capitalize">{{ form.registrationStatus }}</span></div>
+              <div>Seller: <span class="text-gray-900 capitalize">{{ form.sellerType === 'private' ? 'Individual' : 'Dealer' }}</span></div>
               <div>Fuel: <span class="text-gray-900 capitalize">{{ form.fuelType }}</span></div>
               <div>Mileage: <span class="text-gray-900">{{ form.mileage || '0' }} km</span></div>
               <div>Photos: <span class="text-gray-900">{{ form.photos.length }}</span></div>

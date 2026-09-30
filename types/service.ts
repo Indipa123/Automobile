@@ -26,6 +26,7 @@ export interface ServiceProvider {
   type: ServiceType
   typeLabel: string
   verified: boolean
+  registered?: boolean
   rating: number
   reviewCount: number
   address: string

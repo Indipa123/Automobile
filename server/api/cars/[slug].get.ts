@@ -1,4 +1,5 @@
 import { mockCars } from '~/server/utils/mockCars'
+import { mockDealers } from '~/server/utils/mockDealers'
 
 export default defineEventHandler((event) => {
   const slug = getRouterParam(event, 'slug')
@@ -9,8 +10,12 @@ export default defineEventHandler((event) => {
   }
 
   // Add extra images for detail page
+  const { sellerPhone, ...publicCar } = car
+  const dealer = car.dealerId ? mockDealers.find(d => d.id === car.dealerId) : undefined
+  const publicDealer = dealer ? (({ phone, whatsapp, ...details }) => details)(dealer) : undefined
   const carWithImages = {
-    ...car,
+    ...publicCar,
+    dealer: publicDealer,
     images: [
       car.images[0],
       'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&h=450&fit=crop&auto=format',

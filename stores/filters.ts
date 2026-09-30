@@ -23,6 +23,9 @@ export const useFiltersStore = defineStore('filters', () => {
     if (f.condition && f.condition !== 'all') count++
     if (f.make) count++
     if (f.model) count++
+    if (f.registrationStatus) count++
+    if (f.sellerType) count++
+    if (f.ownershipMax) count++
     if (f.yearMin || f.yearMax) count++
     if (f.priceMin || f.priceMax) count++
     if (f.bodyType?.length) count++
