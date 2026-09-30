@@ -327,31 +327,22 @@ const ecosystemPillars = [
     <!-- Price Range Cards -->
     <PriceRangeCards />
 
-    <!-- Loan Calculator Teaser -->
-    <section class="py-16 bg-surface border-t border-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="text-primary text-xs font-semibold tracking-widest uppercase mb-3">Financing & Insurance Connections</p>
-            <h2 class="font-display font-bold text-gray-900 text-3xl md:text-4xl mb-4">
-              Calculate Your Monthly Leasing EMI
-            </h2>
-            <p class="text-muted text-base mb-6 leading-relaxed">
-              Estimate monthly repayments across Commercial Bank, Sampath, HNB and compare full comprehensive auto insurance quotes directly on our platform.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <NuxtLink to="/finance/loan-calculator">
-                <AppButton variant="primary" size="lg">Try Loan Calculator</AppButton>
-              </NuxtLink>
-              <NuxtLink to="/finance/insurance">
-                <AppButton variant="outline" size="lg">Get Insurance Quote</AppButton>
-              </NuxtLink>
-            </div>
-          </div>
-          <div class="bg-background border border-border rounded-3xl p-6 shadow-sm">
-            <LoanCalculator />
-          </div>
+    <!-- Loan Calculator -->
+    <section class="py-16 sm:py-20 bg-surface border-t border-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+          <p class="text-primary text-xs font-bold tracking-widest uppercase mb-3">Plan your purchase</p>
+          <h2 class="font-display font-bold text-gray-900 text-3xl sm:text-4xl mb-3">See your monthly car payment</h2>
+          <p class="text-muted text-base leading-relaxed">Adjust the vehicle price, down payment, loan term and interest rate to see an estimated monthly payment.</p>
         </div>
+        <div class="rounded-3xl border border-border bg-white p-4 sm:p-6 lg:p-8 shadow-sm">
+          <LoanCalculator compact />
+        </div>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <NuxtLink to="/finance/loan-calculator"><AppButton variant="primary" size="lg">Open full calculator</AppButton></NuxtLink>
+          <NuxtLink to="/finance/insurance"><AppButton variant="outline" size="lg">Explore insurance</AppButton></NuxtLink>
+        </div>
+        <p class="mt-4 text-center text-xs text-muted">Illustrative estimate only. Actual financing terms depend on the provider.</p>
       </div>
     </section>
 

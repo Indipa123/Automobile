@@ -1,4 +1,5 @@
 <script setup lang="ts">
+defineProps<{ compact?: boolean }>()
 const { calculateLoan } = useLoanCalculator()
 const { formatLKRFull } = useFormatCurrency()
 
@@ -23,13 +24,13 @@ const banks = [
 
 <template>
   <div class="space-y-6">
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
       <!-- Inputs -->
       <div class="bg-white border border-border rounded-2xl p-4 sm:p-6 space-y-5">
         <h3 class="font-display font-bold text-gray-900 text-xl">Loan Calculator</h3>
 
         <div>
-          <div class="flex justify-between mb-1.5">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1.5">
             <label class="text-sm text-muted">Vehicle Price</label>
             <span class="font-mono text-gray-900 text-sm font-medium">{{ formatLKRFull(vehiclePrice) }}</span>
           </div>
@@ -40,7 +41,7 @@ const banks = [
         </div>
 
         <div>
-          <div class="flex justify-between mb-1.5">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1.5">
             <label class="text-sm text-muted">Down Payment</label>
             <span class="font-mono text-gray-900 text-sm font-medium">{{ downPaymentPct }}% ({{ formatLKRFull(result.downPayment) }})</span>
           </div>
@@ -51,7 +52,7 @@ const banks = [
         </div>
 
         <div>
-          <div class="flex justify-between mb-1.5">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1.5">
             <label class="text-sm text-muted">Loan Term</label>
             <span class="font-mono text-gray-900 text-sm font-medium">{{ months }} months ({{ (months / 12).toFixed(1) }} yrs)</span>
           </div>
@@ -62,7 +63,7 @@ const banks = [
         </div>
 
         <div>
-          <div class="flex justify-between mb-1.5">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1.5">
             <label class="text-sm text-muted">Interest Rate (Annual)</label>
             <span class="font-mono text-gray-900 text-sm font-medium">{{ annualRate }}%</span>
           </div>
@@ -78,21 +79,21 @@ const banks = [
         <!-- EMI highlight -->
         <div class="bg-primary/10 border border-primary/20 rounded-2xl p-6 text-center">
           <p class="text-primary text-sm font-medium mb-1">Monthly EMI</p>
-          <p class="font-mono font-bold text-gray-900 text-4xl">{{ formatLKRFull(result.monthlyEMI) }}</p>
+          <p class="font-mono font-bold text-gray-900 text-3xl sm:text-4xl break-words">{{ formatLKRFull(result.monthlyEMI) }}</p>
           <p class="text-muted text-xs mt-1">per month for {{ months }} months</p>
         </div>
 
         <!-- Summary -->
         <div class="bg-white border border-border rounded-2xl p-5 space-y-3">
-          <div class="flex justify-between text-sm">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 text-sm">
             <span class="text-muted">Loan Amount</span>
             <span class="text-gray-900 font-mono">{{ formatLKRFull(result.loanAmount) }}</span>
           </div>
-          <div class="flex justify-between text-sm">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 text-sm">
             <span class="text-muted">Total Interest</span>
             <span class="text-red-500 font-mono">{{ formatLKRFull(result.totalInterest) }}</span>
           </div>
-          <div class="flex justify-between text-sm pt-3 border-t border-border font-semibold">
+          <div class="flex flex-wrap items-baseline justify-between gap-1 text-sm pt-3 border-t border-border font-semibold">
             <span class="text-muted">Total Payment</span>
             <span class="text-gray-900 font-mono">{{ formatLKRFull(result.totalPayment) }}</span>
           </div>
@@ -126,7 +127,7 @@ const banks = [
     </div>
 
     <!-- Banks -->
-    <div class="bg-white border border-border rounded-2xl p-4 sm:p-6">
+    <div v-if="!compact" class="bg-white border border-border rounded-2xl p-4 sm:p-6">
       <h4 class="font-display font-semibold text-gray-900 mb-4">Partner Banks & Estimated Rates</h4>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
         <div
@@ -146,7 +147,7 @@ const banks = [
     </div>
 
     <!-- Amortization table -->
-    <div class="bg-white border border-border rounded-2xl overflow-hidden">
+    <div v-if="!compact" class="bg-white border border-border rounded-2xl overflow-hidden">
       <button
         class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
         @click="showAmortization = !showAmortization"

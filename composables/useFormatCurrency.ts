@@ -16,7 +16,7 @@ export const useFormatCurrency = () => {
   }
 
   const formatLKRFull = (amount: number): string => {
-    return `Rs. ${new Intl.NumberFormat('en-LK').format(amount)}`
+    return `Rs. ${new Intl.NumberFormat('en-LK', { maximumFractionDigits: 0 }).format(amount)}`
   }
 
   const formatLKRShort = (amount: number): string => {
